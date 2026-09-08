@@ -1,0 +1,13 @@
+# tool artifacts
+codedb.snapshot
+.claude/hooks/.logs/
+
+# LaTeX build leftovers (tectonic cleans up after itself, but Overleaf/pdflatex don't)
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+.DS_Store
