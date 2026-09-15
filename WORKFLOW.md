@@ -37,6 +37,29 @@ margin, not in the answer key.
 - ✅ Answer key uses the **same numbering**
 - ✅ **Blank work space** after every question — students solve on the sheet itself
 
+### Plain practice layout
+
+These formatting rules apply to every guide, including topic-specific and midterm guides,
+unless Tommy explicitly requests a different format.
+
+- **Use plain black text on white paper.** No colored headings, highlighted panels, shaded
+  backgrounds, or question-number boxes. Use simple bold numbers such as `1.` and `2.`.
+- **Keep figures grayscale.** Preserve all labels and distinctions needed to solve the problem;
+  verify that curves or regions remain distinguishable without color.
+- **Start directly with practice questions and blank work space.** A short title or header and
+  name/date line are fine; do not add a separate cover or introduction page.
+- **Do not add instructional sections** such as “A reliable setup,” “Recognize the model,”
+  “Before you finish,” formula summaries, strategy tables, worked examples, or review notes
+  before or between the practice questions.
+- Keep instructions, conditions, supplied formulas, and diagrams that belong to the question
+  itself. Do not add solution hints to the practice pages.
+- Keep the document order: **practice questions → answer key → source list**. The answer key
+  and source list each start on a new page. “Just questions for practice” removes introductory
+  teaching material; it does not remove the workflow's answer key or source list unless requested.
+
+`related-rates-study-guide.tex` is the current example of this plain, questions-first layout.
+If an older template uses color or introductory material, remove it when creating a new guide.
+
 The number map (`8 = 2.1 #17`, …) is no longer a hidden comment block — it renders, once, as the
 source list on the last page. One copy only: a comment-block map *plus* a printed list is two
 copies of the same data and they drift.
@@ -160,7 +183,8 @@ Use `\vspace*` (starred!) so a blank is never silently swallowed at a page break
    and the neighbouring problems' text outside the crop, or the figure leaks the source.
    (TikZ redraws are no longer required; the old `\gaxes` / `hole` / `fdot` / `cline` styles in
    the 2.1–2.5 file still work if a figure ever needs to be drawn from scratch.)
-4. **Renumber 1…N** and strip all source references (§2).
+4. **Renumber 1…N** and strip all source references (§2). Apply the plain practice layout:
+   black text, grayscale figures, and questions first with no introductory review material.
 5. **Write the two Tommy questions** (§3).
 6. **Write the answer key** after `\clearpage` in the *same file*, same order — answers only for
    1…N, full steps for Tommy's.
@@ -208,6 +232,11 @@ the two Tommy entries. A student looking up the problem they missed and finding 
 failure this list exists to prevent.
 
 **Confirm every problem has work space:** count `\prob{}` against `\ws[SMLG]` occurrences.
+
+**Check the practice layout:** the first page must contain Question 1, with no introductory
+review page. Inspect the TeX and rendered PDF for colored text, shaded boxes, colored figures,
+and added teaching sections. Confirm that required question instructions and figure labels
+remain readable, and that the answer key and final source list are still present.
 
 **Check the compiled PDF by rendering it** (PyMuPDF is installed, poppler is not):
 ```python
@@ -274,6 +303,9 @@ Must be empty. The fix is a `\clearpage` before the block that overflowed, not l
 
 ## 8. Quick checklist
 
+- [ ] Plain black text, simple question numbers, no shaded boxes, and readable grayscale figures
+- [ ] Question 1 starts on the first page; no cover, setup tutorial, formula summary, or review section
+- [ ] Practice questions first, then answer key, then source list; key and sources start on new pages
 - [ ] Practice table read; both clusters identified
 - [ ] Every listed problem transcribed; missing pages reported
 - [ ] Graph problems cropped to `fig-q<n>.png` in the repo folder, cropped tight enough not to
