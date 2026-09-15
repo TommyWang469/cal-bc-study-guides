@@ -147,6 +147,14 @@ end: a student knows they missed #14 and has no way to look up its neighbours.
 - Graph problems reused across sections (§7) get **both** locations listed.
 - Open the list with one line naming the sections covered, e.g. *"These questions come from
   Sections 2.1, 2.3, 2.4 and 2.5. Try the surrounding problems for more practice."*
+- **Keep the source page concise:** a short introduction and the question-to-source list or
+  table. Retain useful references such as textbook section/exercise numbers and AP packet
+  page, question identifier, and year.
+- **Do not print production notes:** no “Source files” inventory, local PDF filenames,
+  explanations of handwritten source labels, “Exclusion check” paragraphs, or “Selection note”
+  paragraphs explaining why questions were chosen, replaced, or clarified. Perform source and
+  exclusion checks during preparation; keep that process commentary out of the student guide.
+  Continue to identify original questions in their source entries.
 
 The `% === SOURCELIST ===` marker on the line above it is what the leak grep (§6) cuts at — it
 must stay, or the grep starts reporting the source list as a leak and gets ignored.
@@ -312,6 +320,7 @@ Must be empty. The fix is a `\clearpage` before the block that overflowed, not l
       show the textbook problem number, and listed for Tommy to upload to Overleaf
 - [ ] Numbered 1…N; zero section/exercise/theorem references above the `SOURCELIST` marker
 - [ ] Source list on the last page: every 1…N entry, grouped by section, Tommy 1/2 marked original
+- [ ] Source page has no file inventory, exclusion-check paragraph, or selection/process notes
 - [ ] Work space after every question, `\vspace*`, four sizes
 - [ ] Tommy 1 and Tommy 2 written, one per cluster, with a real trap in one of them
 - [ ] Answer key in the same `.tex` after `\clearpage`: same numbering, answers-only for 1…N,
