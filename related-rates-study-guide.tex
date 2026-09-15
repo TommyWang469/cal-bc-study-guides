@@ -1,0 +1,173 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.75in,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,enumitem,graphicx,array,booktabs,fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small Related Rates}
+\rhead{\small Calculus BC}\cfoot{\thepage}
+\setlength{\parindent}{0pt}
+\newcommand{\wsS}{\vspace*{3cm}}
+\newcommand{\wsM}{\vspace*{4.5cm}}
+\newcommand{\wsL}{\vspace*{6cm}}
+\newcommand{\wsG}{\vspace*{2cm}}
+\newcommand{\prob}[1]{\par\noindent\textbf{#1.}\quad}
+\newcommand{\ansitem}[1]{\item[\textbf{#1.}]}
+\newcommand{\figurehere}[2]{\par\smallskip\centerline{\includegraphics[height=#2]{fig-related-rates-q#1.png}}\smallskip}
+\newcommand{\choices}[5]{\par\medskip\noindent\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllll}\textbf{(A)} #1&\textbf{(B)} #2&\textbf{(C)} #3&\textbf{(D)} #4&\textbf{(E)} #5\end{tabular*}\par}
+\begin{document}
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{1} A particle moves along the curve $xy=10$. If $x=2$ and $\dfrac{dy}{dt}=3$, what is the value of $\dfrac{dx}{dt}$?
+\choices{$-\frac52$}{$-\frac65$}{$0$}{$\frac45$}{$\frac65$}
+\wsM
+\vfill
+\prob{2} Assume that all variables are functions of $t$. If
+\[2y^3-x^2+4x=-10\qquad\text{and}\qquad \frac{dy}{dt}=-3\]
+when $x=-2$ and $y=1$, find $\dfrac{dx}{dt}$.
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{3} A fire has started in a dry, open field and spreads in the form of a circle. The radius of the circle increases at the rate of $6$ ft/min. Find the rate at which the fire area is increasing when the radius is $150$ feet.
+\wsM
+\vfill
+\prob{4} The radius of a circle is decreasing at a constant rate of $0.1$ centimeter per second. In terms of the circumference $C$, what is the rate of change of the area of the circle, in square centimeters per second?
+\choices{$-(0.2)\pi C$}{$-(0.1)C$}{$-\dfrac{(0.1)C}{2\pi}$}{$(0.1)^2C$}{$(0.1)^2\pi C$}
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{5} The top of a silo has the shape of a hemisphere of diameter $20$ feet. If it is coated uniformly with a layer of ice and the thickness is decreasing at a rate of $\frac14$ in./hr, how fast is the volume of the ice changing when the ice is $2$ inches thick?
+\wsM
+\vfill
+\prob{6} Gas is being pumped into a spherical balloon at a rate of $5$ ft$^3$/min. Find the rate at which the radius is changing when the diameter is $18$ inches.
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{7} A girl starts at a point $A$ and runs east at a rate of $10$ ft/sec. One minute later, another girl starts at $A$ and runs north at a rate of $8$ ft/sec. At what rate is the distance between them changing $1$ minute after the second girl starts?
+\wsM
+\vfill
+\prob{8} A North--South highway $A$ and an East--West highway $B$ intersect at a point $P$. At 10:00 A.M. an automobile crosses $P$ going north on highway $A$ at a speed of $50$ mi/hr. At that same instant, an airplane flying east at a speed of $200$ mi/hr and an altitude of $26{,}400$ feet is directly above the point on highway $B$ that is $100$ miles west of $P$. If the airplane and the automobile maintain the same speed and direction, at what rate is the distance between them changing at 10:15 A.M.?
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{9} In the figure, $PQ$ represents a $40$-foot ladder with end $P$ against a vertical wall and end $Q$ on level ground. If the ladder is slipping down the wall, what is the distance $RQ$ at the instant when $Q$ is moving along the ground $\frac34$ as fast as $P$ is moving down the wall?
+\figurehere{9}{2.6cm}
+\choices{$\frac65\sqrt{10}$}{$\frac85\sqrt{10}$}{$\frac{80}{\sqrt7}$}{$24$}{$32$}
+\wsM
+\vfill
+\prob{10} A man on a dock is pulling in a boat by means of a rope attached to the bow of the boat $1$ foot above water level and passing through a simple pulley located on the dock $8$ feet above water level. If he pulls in the rope at a rate of $2$ ft/sec, how fast is the boat approaching the dock when the bow of the boat is $25$ feet from a point that is directly below the pulley?
+\figurehere{10}{2.8cm}
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{11} A small lamp is being raised vertically above a fixed point on level ground at $2$ ft/sec. A person $6$ feet tall stands still $12$ feet from that point. When the lamp is $18$ feet above the ground, at what rate is the length of the person's shadow on the ground changing? Treat the lamp as a point light source.
+\wsM
+\vfill
+\prob{12} A spotlight at ground level is $20$ meters from a vertical wall. A person $2$ meters tall walks directly from the spotlight toward the wall at $\frac32$ m/sec. At the instant the person is $8$ meters from the spotlight, at what rate is the height of the person's shadow on the wall changing? Treat the spotlight as a point light source.
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{13} As sand leaks out of a hole in a container, it forms a conical pile whose altitude is always the same as its radius. If the height of the pile is increasing at a rate of $6$ in./min, find the rate at which the sand is leaking out when the altitude is $10$ inches.
+\wsM
+\vfill
+\prob{14} A paper cup containing water has the shape of a frustum of a right circular cone of altitude $6$ inches and lower and upper base radii $1$ inch and $2$ inches, respectively. If water is leaking out of the cup at the rate of $3$ in.$^3$/hr, how fast is the water level decreasing when the depth of the water is $4$ inches? The volume of a frustum of altitude $h$ and base radii $a$ and $b$ is
+\[V=\frac13\pi h(a^2+b^2+ab).\]
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{15} The ends of a water trough $8$ feet long are equilateral triangles whose sides are $2$ feet long, as shown. If water is being pumped into the trough at a rate of $5$ ft$^3$/min, find the rate at which the water level is rising when the depth of the water is $8$ inches.
+\figurehere{15}{3.0cm}
+\wsM
+\vfill
+\prob{16} The top part of a swimming pool is a rectangle of length $60$ feet and width $30$ feet. The depth of the pool varies uniformly from $4$ feet to $9$ feet through a horizontal distance of $40$ feet and then is level for the remaining $20$ feet, as illustrated by the cross-sectional view. If the pool is being filled with water at a rate of $500$ gal/min, approximate the rate at which the water level is rising when the depth of the water at the deep end is $4$ feet. Use $1$ gal $\approx 0.1337$ ft$^3$.
+\figurehere{16}{2.0cm}
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{17} An airplane at an altitude of $10{,}000$ feet is flying at a constant speed on a horizontal line that will take it directly over an observer on the ground. At a given instant, the observer notes that the angle of elevation of the airplane is $60^\circ$ and is increasing at a rate of $1^\circ$ per second. Find the speed of the airplane.
+\wsM
+\vfill
+\prob{18} A missile is fired vertically from a point that is $5$ miles from a tracking station and at the same elevation. For the first $20$ seconds of flight, its angle of elevation $\theta$ changes at a constant rate of $2^\circ$ per second. Find the velocity of the missile when the angle of elevation is $30^\circ$.
+\figurehere{18}{3.0cm}
+\wsM
+\clearpage
+\noindent Name: \rule{2.7in}{0.4pt}\hfill Date: \rule{1.3in}{0.4pt}\par\bigskip
+\prob{19} Boyle's law for confined gases states that if the temperature is constant, $pv=c$, where $p$ is pressure, $v$ is volume, and $c$ is a constant. At a certain instant the volume is $75$ in.$^3$, the pressure is $30$ lb/in.$^2$, and the pressure is decreasing at a rate of $2$ lb/in.$^2$ every minute. At what rate is the volume changing at this instant?
+\wsM
+\vfill
+\prob{20} When two resistors $R_1$ and $R_2$ are connected in parallel, the total resistance $R$ is given by
+\[\frac1R=\frac1{R_1}+\frac1{R_2}.\]
+If $R_1$ and $R_2$ are increasing at rates of $0.01$ ohm/sec and $0.02$ ohm/sec, respectively, at what rate is $R$ changing at the instant that $R_1=30$ ohms and $R_2=90$ ohms?
+\figurehere{20}{2.3cm}
+\wsM
+\clearpage
+\section*{Answer Key}
+\textit{Signed rates are shown where helpful. A negative rate means the quantity is decreasing.}
+\begin{description}[leftmargin=2.8em,labelwidth=2em,itemsep=13pt]
+\ansitem{1} \textbf{(B)} $\displaystyle\frac{dx}{dt}=-\frac65$.
+\ansitem{2} $\displaystyle\frac{dx}{dt}=\frac94$.
+\ansitem{3} The area increases at $1800\pi$ ft$^2$/min.
+\ansitem{4} \textbf{(B)} $\displaystyle\frac{dA}{dt}=-0.1C$ cm$^2$/sec, when $C$ is measured in centimeters.
+\ansitem{5} $\displaystyle\frac{dV_{\rm ice}}{dt}=-7442\pi$ in.$^3$/hr, equivalently $-\dfrac{3721\pi}{864}$ ft$^3$/hr.
+\ansitem{6} $\displaystyle\frac{dr}{dt}=\frac{20}{9\pi}$ ft/min.
+\ansitem{7} The distance increases at $\displaystyle\frac{66}{\sqrt{29}}\approx12.256$ ft/sec.
+\ansitem{8} $\displaystyle\frac{dd}{dt}=-\frac{3750}{\sqrt{429}}\approx-181.052$ mi/hr; the distance is decreasing.
+\ansitem{9} \textbf{(E)} $RQ=32$ ft.
+\ansitem{10} The boat approaches the dock at $\displaystyle\frac{2\sqrt{674}}{25}\approx2.077$ ft/sec. Its horizontal distance from the dock has the negative of this rate.
+\end{description}
+\clearpage
+\section*{Answer Key \textnormal{(continued)}}
+\begin{description}[leftmargin=2.8em,labelwidth=2em,itemsep=11pt]
+\ansitem{11} The shadow shortens at $1$ ft/sec: $s'=-1$ ft/sec.
+\par\smallskip Let $H$ be the lamp height and $s$ the shadow length. Similar triangles give
+\[\frac{H}{12+s}=\frac6s \quad\Longrightarrow\quad (H-6)s=72.\]
+Differentiate: $H's+(H-6)s'=0$. When $H=18$, $s=6$ and $H'=2$, so $12+12s'=0$ and $s'=-1$ ft/sec.
+\ansitem{12} The shadow height decreases at $\dfrac{15}{16}$ m/sec: $y'=-\dfrac{15}{16}$ m/sec.
+\par\smallskip Let $x$ be the person's distance from the spotlight and $y$ the shadow height on the wall. Similar triangles give
+\[\frac{y}{20}=\frac2x \quad\Longrightarrow\quad xy=40.\]
+Differentiate: $x'y+xy'=0$. At $x=8$, $y=5$ and $x'=\frac32$, so $\frac{15}{2}+8y'=0$ and $y'=-\frac{15}{16}$ m/sec.
+\ansitem{13} Sand leaks into the pile at $600\pi$ in.$^3$/min.
+\ansitem{14} The level decreases at $\displaystyle\frac{27}{25\pi}$ in./hr; $h'=-\dfrac{27}{25\pi}$ in./hr.
+\ansitem{15} The water level rises at $\displaystyle\frac{15\sqrt3}{32}\approx0.812$ ft/min.
+\ansitem{16} The water level rises at approximately $0.042853$ ft/min.
+\ansitem{17} The airplane's speed is $\displaystyle\frac{2000\pi}{27}\approx232.711$ ft/sec.
+\ansitem{18} The missile's velocity is $\displaystyle\frac{2\pi}{27}$ mi/sec upward, equivalently $\dfrac{3520\pi}{9}\approx1228.712$ ft/sec upward.
+\ansitem{19} The volume increases at $5$ in.$^3$/min.
+\ansitem{20} The total resistance increases at $\displaystyle\frac{11}{1600}=0.006875$ ohm/sec.
+\end{description}
+\clearpage
+% === SOURCELIST ===
+\section*{Sources and Coverage}
+These questions come from textbook Section 3.8 and the supplied AP packet, with two original shadow problems. Each setup type contains exactly two practice questions. Source labels appear only on this page.
+\par\medskip
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}p{0.07\linewidth}p{0.28\linewidth}p{0.54\linewidth}@{}}
+\toprule
+\textbf{Guide} & \textbf{Type} & \textbf{Source}\\
+\midrule
+1 & Given equation & AP packet p. 9, BC 4 (1993)\\
+2 & & Textbook 3.8 \#6, p. 158\\
+3 & Circular area & Textbook 3.8 \#10, p. 158\\
+4 & & AP packet p. 10, BC 78 (1998)\\
+5 & Spheres and shells & Textbook 3.8 \#17, p. 159 \textbf{(requested)}\\
+6 & & Textbook 3.8 \#11, p. 158\\
+7 & Moving objects & Textbook 3.8 \#14, p. 158 \textbf{(requested)}\\
+8 & & Textbook 3.8 \#36, p. 160\\
+9 & Ladders and ropes & AP packet p. 9, BC 34 (1993)\\
+10 & & Textbook 3.8 \#16, p. 159\\
+11 & Shadows & Original: vertically moving lamp\\
+12 & & Original: shadow on a wall\\
+13 & Cones and frustums & Textbook 3.8 \#18, p. 159\\
+14 & & Textbook 3.8 \#37, p. 160\\
+15 & Troughs and pools & Textbook 3.8 \#23, pp. 159--160 \textbf{(requested)}\\
+16 & & Textbook 3.8 \#38, pp. 160--161 \textbf{(requested)}\\
+17 & Changing angles & Textbook 3.8 \#39, p. 161 \textbf{(requested)}\\
+18 & & Textbook 3.8 \#46, p. 161 \textbf{(requested)}\\
+19 & Physical laws & Textbook 3.8 \#21, p. 159\\
+20 & & Textbook 3.8 \#29, p. 160\\
+\bottomrule
+\end{tabular}
+\par\medskip
+\textbf{Source files.} Textbook: \textrm{HW\_Pages\_3.8.pdf}. AP packet: \textrm{AP\_Packet\_9.pdf} and \textrm{AP\_Packet\_10.pdf}. AP identifiers and years follow the handwritten labels on the supplied scans.
+\medskip
+\par\textbf{Exclusion check.} No textbook 3.8 \#1, \#5, \#7, \#13, \#15, or \#45. No repeated questions from the saved Midterm 1 guide: textbook 3.8 \#34 and \#42, and AP packet p. 9, BC 37 (1988), are omitted.
+\medskip
+\par\textbf{Selection note.} The eligible textbook and packet items supply 18 questions. The two original shadow questions fill the remaining pair because the supplied streetlight-shadow exercises were excluded. For Question 17, horizontal flight is made explicit to clarify the textbook's constant-altitude setup.
+\end{document}
