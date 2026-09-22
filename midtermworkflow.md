@@ -24,11 +24,14 @@ For 4.3 and 4.4:
 - Carry over every 4.3 and 4.4 textbook exercise already transcribed in study-guide-4.3-4.6.tex.
 - This produces three exercises from 4.3 and six from 4.4.
 
-The finished guide therefore has 57 questions:
+After selecting the original midterm questions, append every supplied Section Quiz screenshot question to its matching section. Keep the screenshot order within each section. If a screenshot contains a graph, redraw it clearly in black and white or crop the graph without the Schoology interface.
+
+The finished guide therefore has 99 questions:
 
 - 32 newly selected textbook exercises for 2.1-4.2
 - 16 AP packet questions for 2.1-4.2
 - 9 required textbook exercises for 4.3-4.4
+- 42 Section Quiz questions from the supplied screenshots
 
 Do not add Tommy's Questions or any other original problems.
 
@@ -68,8 +71,9 @@ Sections 2.2 and 3.5 have no calendar entries, so their supplied textbook pages 
 
 ## 5. Student-facing layout
 
-- Number the questions continuously from 1 through 57.
 - Separate every section's question group with a plain black horizontal rule and a section/topic heading, such as “Section 3.8: Related Rates.”
+- Within each section, place a “Section Quizzes” subheading after the original questions and append that section's screenshot questions one by one.
+- Number the complete guide continuously from 1 through 99.
 - Do not print textbook problem numbers or source labels on the practice or answer pages.
 - Put blank work space after every question.
 - Keep multiple-choice answer choices with the question.
@@ -88,7 +92,7 @@ Sections 2.2 and 3.5 have no calendar entries, so their supplied textbook pages 
 ## 7. Final checks
 
 1. Compile with: tectonic midterm1-study-guide-2.1-4.4.tex
-2. Confirm that the question and answer commands both run from 1 through 57 with no gaps.
+2. Confirm that the rendered question and answer numbers both run from 1 through 99 with no gaps.
 3. Confirm exactly one workspace macro follows each question.
 4. Confirm the source list has exactly one entry for every question.
 5. Recheck every eligible textbook selection against the 26-27 exclusion sets.

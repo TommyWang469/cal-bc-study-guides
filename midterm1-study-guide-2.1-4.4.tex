@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[margin=0.8in,headheight=14pt]{geometry}
 \usepackage{amsmath,amssymb}
-\usepackage{enumitem,multicol,needspace,fancyhdr}
+\usepackage{enumitem,multicol,needspace,fancyhdr,tikz}
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\small Midterm 1 Study Guide}
@@ -12,11 +12,21 @@
 \newcommand{\wsL}{\vspace*{5.0cm}}
 \newlist{probs}{itemize}{1}
 \setlist[probs]{leftmargin=2.8em,itemsep=4pt,topsep=3pt,label={}}
-\newcommand{\prob}[1]{\item[\textbf{#1}]}
+\newcounter{problem}
+\newcommand{\prob}[1]{\refstepcounter{problem}\item[\textbf{\theproblem.}]}
 \newlist{ans}{itemize}{1}
 \setlist[ans]{leftmargin=3.0em,itemsep=5pt,topsep=3pt,label={}}
-\newcommand{\ansitem}[1]{\item[\textbf{#1.}]}
+\newcounter{answer}
+\newcommand{\ansitem}[1]{\refstepcounter{answer}\item[\textbf{\theanswer.}]}
 \newcommand{\choices}[5]{\begin{enumerate}[label=\textbf{(\Alph*)},leftmargin=2.4em,itemsep=1pt,topsep=4pt]\item #1\item #2\item #3\item #4\item #5\end{enumerate}}
+\newcommand{\cfuheading}{%
+  \Needspace{11.5cm}%
+  \par\smallskip
+  \noindent\textbf{Section Quizzes}\par
+  \vspace{0.2em}
+  \noindent\rule{0.55\linewidth}{0.4pt}\par
+  \smallskip
+}
 \newcommand{\topicdivider}[2]{%
   \Needspace{11.5cm}%
   \par\medskip
@@ -45,6 +55,41 @@
 \begin{probs}
 \prob{3.} If $f(x)=2x^2+1$, then $\displaystyle\lim_{x\to0}\frac{f(x)-f(0)}{x^2}$ is\choices{$0$}{$1$}{$2$}{$4$}{nonexistent} \wsS
 \end{probs}
+\cfuheading
+\Needspace{7cm}
+\begin{probs}
+\prob{} Find $\displaystyle\lim_{x\to36}\frac{6-\sqrt{x}}{x-36}$. \wsM
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} Let
+\[
+f(x)=\begin{cases}
+x^2-2,&-3<x<3,\\
+4,&x=3,\\
+x+4,&3<x<\infty.
+\end{cases}
+\]
+Find $\displaystyle\lim_{x\to3}f(x)$. \wsM
+\end{probs}
+\Needspace{10cm}
+\begin{probs}
+\prob{} The graph of $f$ is shown. Find (a) $\displaystyle\lim_{x\to1^-}f(x)$, (b) $\displaystyle\lim_{x\to1^+}f(x)$, and (c) $\displaystyle\lim_{x\to1}f(x)$.
+\begin{center}
+\begin{tikzpicture}[x=0.8cm,y=0.8cm]
+  \draw[step=1cm,gray!25,very thin] (-2.2,-4.2) grid (3.2,1.2);
+  \draw[->] (-2.2,0)--(3.2,0) node[right] {$x$};
+  \draw[->] (0,-4.2)--(0,1.2) node[above] {$y$};
+  \draw[thick] plot[smooth] coordinates {(-2,-4) (-1.4,-3.1) (0,-3) (0.7,-2.5) (1,-2)};
+  \draw[thick] plot[smooth] coordinates {(1,-1) (1.5,-0.9) (2,0) (2.7,1.2)};
+  \draw[fill=white,thick] (1,-2) circle (2.5pt);
+  \fill (1,-1) circle (2.5pt);
+  \node[left] at (0,-2) {$-2$};
+  \node[below] at (1,0) {$1$};
+\end{tikzpicture}
+\end{center}
+\wsM
+\end{probs}
 \topicdivider{2.2}{The Epsilon-Delta Definition of a Limit}
 \Needspace{7cm}
 \begin{probs}
@@ -71,6 +116,19 @@
 \begin{probs}
 \prob{9.} $\displaystyle\lim_{h\to0}\frac{\sin(x+h)-\sin x}{h}$ is\choices{$0$}{$1$}{$\sin x$}{$\cos x$}{nonexistent} \wsS
 \end{probs}
+\cfuheading
+\Needspace{7cm}
+\begin{probs}
+\prob{} Find $\displaystyle\lim_{x\to2}\left(\frac{x^2}{x-2}-\frac{4}{x-2}\right)$. \wsM
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} Find $\displaystyle\lim_{h\to0}\frac{5-\sqrt{25+h}}{h}$. \wsM
+\end{probs}
+\Needspace{9cm}
+\begin{probs}
+\prob{} Let $f(x)=\sqrt{7-x}$. Find (a) $\displaystyle\lim_{x\to7^-}f(x)$, (b) $\displaystyle\lim_{x\to7^+}f(x)$, and (c) $\displaystyle\lim_{x\to7}f(x)$. \wsL
+\end{probs}
 \topicdivider{2.4}{Infinite Limits and Asymptotes}
 \Needspace{7cm}
 \begin{probs}
@@ -83,6 +141,23 @@
 \Needspace{5.5cm}
 \begin{probs}
 \prob{12.} If $k$ is a positive integer, then $\displaystyle\lim_{x\to+\infty}\frac{x^k}{e^x}$ is\choices{$0$}{$1$}{$e$}{$k!$}{nonexistent} \wsS
+\end{probs}
+\cfuheading
+\Needspace{7cm}
+\begin{probs}
+\prob{} Evaluate $\displaystyle\lim_{x\to\infty}\frac{-x^4+5x}{3x^3-4}$.\choices{$0$}{$-\frac13$}{$-\infty$}{$\infty$}{$\frac53$} \wsM
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} Find $\displaystyle\lim_{x\to-\infty}\frac{5x-3}{\sqrt{x^2+2}}$. \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} Find the horizontal asymptote and all vertical asymptotes of
+\[
+f(x)=\frac{x^2-2x}{25-x^2}.
+\]
+\wsM
 \end{probs}
 \topicdivider{2.5}{Continuity and the Intermediate Value Theorem}
 \Needspace{7cm}
@@ -110,6 +185,19 @@
 \begin{probs}
 \prob{18.} For what nonnegative value of $b$ is the line $y=-\frac13x+b$ normal to the curve $y=x^3$?\choices{$0$}{$1$}{$\frac43$}{$\frac{10}{3}$}{$\frac{10\sqrt3}{3}$} \wsM
 \end{probs}
+\cfuheading
+\Needspace{9cm}
+\begin{probs}
+\prob{} Given $y=x^2+3$: (a) find the average rate of change of $y$ with respect to $x$ on $[2,2.1]$; (b) find the instantaneous rate of change at the left endpoint. \wsL
+\end{probs}
+\Needspace{9cm}
+\begin{probs}
+\prob{} A sandbag is dropped from a hot-air balloon hovering $600$ feet above the ground. Ignoring air resistance, its height after $t$ seconds is $s(t)=-16t^2+600$. Find its velocity (a) at time $t$ and (b) at $t=2$ seconds. \wsL
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} Use the limit definition of slope to find the slope of $f(x)=\sqrt{x}$ at $P(9,3)$.\choices{$1$}{$\frac16$}{$9$}{$\frac19$}{$6$} \wsM
+\end{probs}
 \topicdivider{3.2}{Differentiability and Tangent Lines}
 \Needspace{10cm}
 \begin{probs}
@@ -122,6 +210,26 @@
 \Needspace{5.5cm}
 \begin{probs}
 \prob{21.} If $f$ is a function such that $\displaystyle\lim_{x\to2}\frac{f(x)-f(2)}{x-2}=0$, which statement must be true?\choices{The limit of $f(x)$ as $x$ approaches $2$ does not exist.}{$f$ is not defined at $x=2$.}{$f'(2)=0$.}{$f$ is continuous at $x=0$.}{$f(2)=0$.} \wsS
+\end{probs}
+\cfuheading
+\Needspace{7cm}
+\begin{probs}
+\prob{} If $y=-3x+10$, find $\dfrac{d^3y}{dx^3}$. \wsM
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} Evaluate $\displaystyle\lim_{h\to0}\frac{(x+h)^4-x^4}{h}$.\choices{$x^4$}{$(x+h)^4$}{$4x^3$}{$(4x^3)'$}{nonexistent} \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} Let
+\[
+f(x)=\begin{cases}
+3x,&x\le0,\\
+x^3,&x>0.
+\end{cases}
+\]
+Find the domain of $f'$. \wsM
 \end{probs}
 \topicdivider{3.3}{Product, Quotient, and Higher Derivatives}
 \Needspace{7cm}
@@ -136,6 +244,23 @@
 \begin{probs}
 \prob{24.} If $u$, $v$, and $w$ are nonzero differentiable functions, then the derivative of $\dfrac{uv}{w}$ is\choices{$\dfrac{uv'+u'v}{w'}$}{$\dfrac{u'v'w-uvw'}{w^2}$}{$\dfrac{uvw'-u'vw-uv'w}{w^2}$}{$\dfrac{u'vw+uv'w+uvw'}{w^2}$}{$\dfrac{uv'w+u'vw-uvw'}{w^2}$} \wsM
 \end{probs}
+\cfuheading
+\Needspace{7cm}
+\begin{probs}
+\prob{} Given $f(x)=\dfrac{3x-2}{5x+1}$, find $f'(2)$. Give an exact fraction. \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} Find the derivative of $h(x)=(x^2-4)(x^4+2)$.\choices{$(2x)(4x^3)+(4x^3)(2x)$}{$(x^2-4)(4x^3)-(x^4+2)(2x)$}{$(2x)(4x^3)$}{$(x^2-4)(4x^3)+(x^4+2)(2x)$}{$(x^2-4)(x^4+2)$} \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} If $f(3)=2$, $f'(3)=8$, $g(3)=-3$, and $g'(3)=5$, find (a) $\left(\dfrac1f\right)'(3)$ and (b) $(fg)'(3)$. \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} Find the point $P$ on $y=x^2$ such that the tangent line at $P$ has $x$-intercept $1$. Give an exact answer. \wsM
+\end{probs}
 \topicdivider{3.4}{Trigonometric Derivatives}
 \Needspace{7cm}
 \begin{probs}
@@ -148,6 +273,19 @@
 \Needspace{7cm}
 \begin{probs}
 \prob{27.} If $f(x)=\dfrac{x}{\tan x}$, then $f'(\frac\pi4)=$\choices{$2$}{$\frac12$}{$1+\frac\pi2$}{$\frac\pi2-1$}{$1-\frac\pi2$} \wsM
+\end{probs}
+\cfuheading
+\Needspace{7cm}
+\begin{probs}
+\prob{} If $h(z)=\dfrac{1-\sin z}{1+\cos z}$, find $h'(0)$. \wsM
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} Evaluate $\displaystyle\lim_{x\to0}\frac{\sin(2x)}{x}$. \wsM
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} If $r(\theta)=\cot\theta+\csc\theta$, find $r'(\pi/6)$. \wsM
 \end{probs}
 \topicdivider{3.5}{Linear Approximation and Differentials}
 \Needspace{10cm}
@@ -175,6 +313,19 @@
 \begin{probs}
 \prob{33.} Let $f$ and $g$ be differentiable, with $f(1)=2$, $f'(1)=3$, $f'(2)=-4$, $g(1)=2$, $g'(1)=-3$, and $g'(2)=5$. If $h(x)=f(g(x))$, then $h'(1)=$\choices{$-9$}{$-4$}{$0$}{$12$}{$15$} \wsM
 \end{probs}
+\cfuheading
+\Needspace{8cm}
+\begin{probs}
+\prob{} Let $m(x)=\tan^2\!\left(\sqrt{x^2-5}\right)$. Find $m'(3)$.\choices{$\tan(2)\sec^2(2)$}{$3\tan(2)\sec^2(2)$}{$4\tan(2)\sec(2)$}{$\frac12\sec^2(6)$}{$\frac14\tan(2)\sec^2(2)$} \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} Use the tangent line to $f(x)=x^2(3-x)$ at $x=1$ to approximate $f(1.1)$. \wsM
+\end{probs}
+\Needspace{9cm}
+\begin{probs}
+\prob{} A particle moves along $y=x^3-2$ such that $\dfrac{dx}{dt}=xy$. Find $\dfrac{dy}{dt}$ at $(x,y)=(2,6)$. \wsL
+\end{probs}
 \topicdivider{3.7}{Implicit Differentiation}
 \Needspace{7cm}
 \begin{probs}
@@ -188,6 +339,19 @@
 \begin{probs}
 \prob{36.} The slope of the line tangent to the curve $y^2+(xy+1)^3=0$ at $(2,-1)$ is\choices{$-\frac32$}{$-\frac34$}{$0$}{$\frac34$}{$\frac32$} \wsM
 \end{probs}
+\cfuheading
+\Needspace{7cm}
+\begin{probs}
+\prob{} Given $x^2-2y^2=18$, find $y'$ at $(6,3)$. \wsM
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} Given $xy=\sin y$, find $y'$ at $(0,\pi)$.\choices{$0$}{$1$}{$-1$}{$-\pi$}{$\pi$} \wsM
+\end{probs}
+\Needspace{9cm}
+\begin{probs}
+\prob{} The curve $x^2+y^2+\sqrt2xy=1$ has horizontal tangent lines at two points. Find both points. \wsL
+\end{probs}
 \topicdivider{3.8}{Related Rates}
 \Needspace{10cm}
 \begin{probs}
@@ -200,6 +364,15 @@
 \Needspace{7cm}
 \begin{probs}
 \prob{39.} A person $2$ meters tall walks directly away from a streetlight $8$ meters above the ground. The person's shadow is lengthening at $\frac49$ meter per second. At what rate, in meters per second, is the person walking?\choices{$\frac4{27}$}{$\frac49$}{$\frac34$}{$\frac43$}{$\frac{16}{9}$} \wsM
+\end{probs}
+\cfuheading
+\Needspace{11cm}
+\begin{probs}
+\prob{} Tony, who is $6$ ft tall, walks away from an $18$ ft lamppost at $3$ ft/sec. At the moment Tony's head is $24$ ft from the top of the lamppost, find (a) the rate at which the length of Tony's shadow is increasing, (b) the rate at which the tip of the shadow is moving, and (c) the rate at which the acute angle formed by the ground and the line from the shadow's tip to Tony's head is changing. \wsL
+\end{probs}
+\Needspace{9cm}
+\begin{probs}
+\prob{} A square has side lengths increasing at $2$ cm/sec. When each side is $6$ cm, find (a) the rate at which the diagonal is changing and (b) the rate at which the area is changing. \wsL
 \end{probs}
 \topicdivider{3.9}{Chapter 3 Derivative Review}
 \Needspace{10cm}
@@ -227,6 +400,35 @@
 \begin{probs}
 \prob{45.} If $f(x)=\frac13x^3-4x^2+12x-5$ on $0\le x\le9$, then the absolute maximum value of $f$ occurs when $x$ is\choices{$0$}{$2$}{$4$}{$6$}{$9$} \wsM
 \end{probs}
+\cfuheading
+\Needspace{11cm}
+\begin{probs}
+\prob{} The graph of $f$ is shown below.
+\begin{center}
+\begin{tikzpicture}[x=0.9cm,y=0.9cm]
+  \draw[step=1cm,gray!25,very thin] (-4.4,-2.2) grid (3.4,3.4);
+  \draw[->] (-4.4,0)--(3.4,0) node[right] {$x$};
+  \draw[->] (0,-2.2)--(0,3.4) node[above] {$y$};
+  \draw[thick] (-4,1)--(-2,3)--(-1,0);
+  \draw[thick] (-1,0) arc[start angle=180,end angle=360,radius=1];
+  \draw[thick] (1,0)--(3,-1);
+  \foreach \p in {(-4,1),(-3,2),(-2,3),(-1,0),(0,-1),(1,0),(2,-0.5),(3,-1)} \fill \p circle (2.2pt);
+\end{tikzpicture}
+\end{center}
+Find (a) the maximum value of $f$, (b) the number of critical numbers of $f$ on $(-4,3)$, and (c) the $x$-values where $f$ has a local maximum. \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} Find the absolute maximum value of $y=x^3-4x^2-5$ on $[-2,5]$.\choices{$5$}{$0$}{$-5$}{$20$}{$25$} \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} State the interval on which $y=x^2$ is increasing and the interval on which $y=x^3$ is increasing. \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} Select all critical numbers of $y=\dfrac{x^2+2x-8}{x-4}$ from the list $0,2,4,6,8,10$. \wsM
+\end{probs}
 \topicdivider{4.2}{Rolle's Theorem and the Mean Value Theorem}
 \Needspace{10cm}
 \begin{probs}
@@ -240,6 +442,28 @@
 \begin{probs}
 \prob{48.} If $f'(x)$ and $g'(x)$ exist and $f'(x)>g'(x)$ for all real $x$, then the graphs of $y=f(x)$ and $y=g(x)$\choices{intersect exactly once.}{intersect no more than once.}{do not intersect.}{could intersect more than once.}{have a common tangent at each intersection.} \wsS
 \end{probs}
+\cfuheading
+\Needspace{8cm}
+\begin{probs}
+\prob{} A function $f$ has $f(2)=5$ and $f(5)=3$. Select all additional information needed to justify that there is a $c\in(2,5)$ such that $f'(c)=-\frac23$: (i) $f$ is continuous on $(2,5)$; (ii) $f$ is continuous on $[2,5]$; (iii) $f$ is differentiable on $(2,5)$; (iv) $f$ is differentiable on $[2,5]$. \wsM
+\end{probs}
+\Needspace{11cm}
+\begin{probs}
+\prob{} Match each function to the statement that best explains why the named theorem does not apply on $[-2,2]$:
+\[
+\begin{array}{ll}
+\text{(A)}\ y=|x-1|,&
+\text{(B)}\ y=\begin{cases}x+2,&-2\le x\le0,\\-x+2,&0<x\le2,\end{cases}\\[1em]
+\text{(C)}\ y=\begin{cases}x+2,&-2\le x<2,\\0,&x=2,\end{cases}&
+\text{(D)}\ y=x.
+\end{array}
+\]
+Use each statement once: (1) MVT fails because the function is not differentiable on $(-2,2)$; (2) Rolle's theorem fails because the function is not differentiable on $(-2,2)$; (3) Rolle's theorem fails because the function is discontinuous on $[-2,2]$; (4) Rolle's theorem fails because $f(-2)\ne f(2)$. \wsM
+\end{probs}
+\Needspace{7cm}
+\begin{probs}
+\prob{} For $y=x^2$, find all values of $c$ that satisfy the conclusion of the Mean Value Theorem on $[1,3]$. \wsM
+\end{probs}
 \topicdivider{4.3}{Increasing, Decreasing, and the First Derivative Test}
 \Needspace{10cm}
 \begin{probs}
@@ -252,6 +476,26 @@
 \Needspace{10cm}
 \begin{probs}
 \prob{51.} Sketch a continuous function $f$ satisfying all the conditions: \[\begin{gathered} f(0)=3,\quad f(-2)=f(2)=-4,\quad f'(0)\text{ is undefined},\\ f'(-2)=f'(2)=0,\\ f'(x)>0\text{ if }-2<x<0\text{ or }x>2,\\ f'(x)<0\text{ if }x<-2\text{ or }0<x<2. \end{gathered}\] \wsL
+\end{probs}
+\cfuheading
+\Needspace{10cm}
+\begin{probs}
+\prob{} For $f(x)=4x^3-3x^4$, select all true statements: $f$ has a local maximum at $x=0$; $f$ has a local minimum at $x=0$; $f$ has a local maximum at $x=1$; $f$ has a local minimum at $x=1$; $f$ is increasing on $(-\infty,0)\cup(0,1)$; $f$ is decreasing on $(1,\infty)$; $f$ is increasing on $[0,\frac43]$; $f$ is decreasing on $(-\infty,0]\cup[\frac43,\infty)$; $f$ has a local maximum at $x=\frac43$. \wsL
+\end{probs}
+\Needspace{11cm}
+\begin{probs}
+\prob{} The graph below is $y=f'(x)$ for a function $f$ defined on $(-4,4)$.
+\begin{center}
+\begin{tikzpicture}[x=0.9cm,y=0.9cm]
+  \draw[step=1cm,gray!25,very thin] (-4.3,-2.3) grid (4.3,2.4);
+  \draw[->] (-4.3,0)--(4.3,0) node[right] {$x$};
+  \draw[->] (0,-2.3)--(0,2.4) node[above] {$f'(x)$};
+  \draw[thick] plot[smooth] coordinates {(-4,-1.5) (-3,-1.1) (-2,0)};
+  \draw[thick] (-2,0) arc[start angle=180,end angle=0,radius=2];
+  \draw[thick] (2,0)--(4,2);
+\end{tikzpicture}
+\end{center}
+State the local extrema of $f$. \wsL
 \end{probs}
 \topicdivider{4.4}{Concavity and the Second Derivative Test}
 \Needspace{10cm}
@@ -278,71 +522,150 @@
 \begin{probs}
 \prob{57.} Sketch a continuous function $f$ satisfying all the conditions. If $n$ is odd, $f(n)=1$ and $f'(n)=0$; if $n$ is even, $f(n)=0$ and $f'(n)$ does not exist. For every integer $n$, \[\begin{aligned} &f'(x)>0 &&\text{when }2n<x<2n+1,\\ &f'(x)<0 &&\text{when }2n-1<x<2n,\\ &f''(x)<0 &&\text{when }2n<x<2n+2. \end{aligned}\] \wsL
 \end{probs}
+\cfuheading
+\Needspace{9cm}
+\begin{probs}
+\prob{} Use the table to decide whether each statement must be true.
+\[
+\begin{array}{c|cc}
+x&f'(x)&f''(x)\\\hline
+2&-2&0\\
+3&0&0\\
+4&0&3
+\end{array}
+\]
+(a) $f$ must have a local maximum at $x=4$. (b) $f$ must have an inflection point at $x=2$. (c) $f$ must have an inflection point at $x=3$. \wsM
+\end{probs}
+\Needspace{8cm}
+\begin{probs}
+\prob{} Find all $x$-values where
+\[
+y=\frac1{20}x^5-\frac13x^4+\frac23x^3+70000
+\]
+has a point of inflection. Select from $-2,-1,0,1,2$. \wsM
+\end{probs}
+\Needspace{15cm}
+\begin{probs}
+\prob{} The graph below is $y=f'(x)$ for a differentiable function $f$ on $(-3,4)$. Find (a) the intervals where $f$ is concave up and (b) the $x$-values of all points of inflection.
+\begin{center}
+\begin{tikzpicture}[x=0.9cm,y=0.9cm]
+  \draw[step=1cm,gray!25,very thin] (-3.3,-1.5) grid (4.3,3.4);
+  \draw[->] (-3.3,0)--(4.3,0) node[right] {$x$};
+  \draw[->] (0,-1.5)--(0,3.4) node[above] {$f'(x)$};
+  \draw[thick,domain=-3:0,samples=60] plot (\x,{(\x+1)^2-1});
+  \draw[thick] (0,0)--(2,-1)--(4,1);
+\end{tikzpicture}
+\end{center}
+\wsM
+\end{probs}
 \clearpage
 \begin{center}{\LARGE\bfseries Answer Key}\end{center}
 \medskip
-\noindent\textit{Answers correspond to questions 1--57.}
+\noindent\textit{Answers correspond to questions 1--99.}
 \begin{ans}
 \ansitem{1} $\dfrac{1}{10}$.
 \ansitem{2} (a) $-1$; (b) $1$; (c) DNE.
 \ansitem{3} (C) $2$.
+\ansitem{} $-\dfrac1{12}$.
+\ansitem{} $7$.
+\ansitem{} (a) $-2$; (b) $-1$; (c) DNE.
 \ansitem{4} $\delta=\sqrt{16.1}-4\approx0.0124805$.
 \ansitem{5} For any $\varepsilon>0$, choose $\delta=\varepsilon/5$. If $0<|x-2|<\delta$, then $|(5x-3)-7|=5|x-2|<5\delta=\varepsilon$.
 \ansitem{6} (B) $\frac12$.
 \ansitem{7} $-9$.
 \ansitem{8} $0\le x^2f(x)\le cx^2$, and both bounding functions tend to $0$ as $x\to0$. The sandwich theorem gives $\lim_{x\to0}x^2f(x)=0$.
 \ansitem{9} (D) $\cos x$.
+\ansitem{} $4$.
+\ansitem{} $-\dfrac1{10}$.
+\ansitem{} (a) $0$; (b) DNE; (c) DNE.
 \ansitem{10} (a) $-\infty$; (b) $\infty$; (c) DNE.
 \ansitem{11} Vertical: $x=-5$. Horizontal: $y=1$.
 \ansitem{12} (A) $0$.
+\ansitem{} (C) $-\infty$.
+\ansitem{} $-5$.
+\ansitem{} Horizontal: $y=-1$. Vertical: $x=-5$ and $x=5$.
 \ansitem{13} Removable discontinuity at $x=1$; $\lim_{x\to1}f(x)=-1\ne f(1)=2$.
 \ansitem{14} $f$ is continuous on $[6,7]$, and $f(6)=69<100<138=f(7)$. By the intermediate value theorem, some $a\in(6,7)$ satisfies $f(a)=100$.
 \ansitem{15} (C) $2$ only.
 \ansitem{16} (a) $m=-4a$. (b) $y=-8x+11$.
 \ansitem{17} (a) $48$, $16$, and $-16$ ft/sec, respectively. (b) $t=7$ sec. (c) $-112$ ft/sec.
 \ansitem{18} (C) $\frac43$.
+\ansitem{} (a) $4.1$; (b) $4$.
+\ansitem{} (a) $v(t)=-32t$ ft/sec; (b) $v(2)=-64$ ft/sec.
+\ansitem{} (B) $\dfrac16$.
 \ansitem{19} (a) $f'(x)=3x^2-4$. (b) $(-\infty,\infty)$. (c) $y=8x-16$. (d) $\left(-\frac{2\sqrt3}{3},\frac{16\sqrt3}{9}\right)$ and $\left(\frac{2\sqrt3}{3},-\frac{16\sqrt3}{9}\right)$.
 \ansitem{20} (a) No: $f'(0)$ does not exist as a finite number. (b) Yes: $f'(x)=1/(3x^{2/3})$ exists throughout the interval (with one-sided derivatives at its endpoints).
 \ansitem{21} (C) $f'(2)=0$.
+\ansitem{} $0$.
+\ansitem{} (C) $4x^3$.
+\ansitem{} $(-\infty,0)\cup(0,\infty)$.
 \ansitem{22} $G'(v)=\dfrac{6v^2}{(v^3+1)^2}$.
 \ansitem{23} $x=-5$ or $x=3$.
 \ansitem{24} (E) $\dfrac{uv'w+u'vw-uvw'}{w^2}$.
+\ansitem{} $\dfrac{13}{121}$.
+\ansitem{} (D) $(x^2-4)(4x^3)+(x^4+2)(2x)$.
+\ansitem{} (a) $-2$; (b) $-14$.
+\ansitem{} $P=(2,4)$.
 \ansitem{25} $h'(z)=\dfrac{2\sin z}{(1+\cos z)^2}$.
 \ansitem{26} Tangent: $y-(1+\sqrt2)=-(2+\sqrt2)(x-\pi/4)$. Normal: $y-(1+\sqrt2)=\dfrac{x-\pi/4}{2+\sqrt2}$.
 \ansitem{27} (E) $1-\frac\pi2$.
+\ansitem{} $-\dfrac12$.
+\ansitem{} $2$.
+\ansitem{} $-4-2\sqrt3$.
 \ansitem{28} (a) $\Delta y=\dfrac{1}{(x+\Delta x)^2}-\dfrac1{x^2}$ and $dy=-\dfrac{2}{x^3}\,dx$, where $dx=\Delta x$. (b) $\Delta y=-\dfrac7{363}$ and $dy=-\dfrac1{45}$.
 \ansitem{29} The pressure difference increases by approximately $40\%$.
 \ansitem{30} (D) $2.7$.
 \ansitem{31} $f'(x)=\dfrac{\cos\sqrt{x}}{2\sqrt{x}}+\dfrac{\cos x}{2\sqrt{\sin x}}$ (where the terms are defined).
 \ansitem{32} $p(3)=-2$ and $p'(3)=24$.
 \ansitem{33} (D) $12$.
+\ansitem{} (B) $3\tan(2)\sec^2(2)$.
+\ansitem{} $f(1.1)\approx2.3$.
+\ansitem{} $144$.
 \ansitem{34} $y'=\dfrac{1-y\cos(xy)}{x\cos(xy)}$.
 \ansitem{35} $y''=-\dfrac{3}{4y^3}$ for $y\ne0$.
 \ansitem{36} (D) $\frac34$.
+\ansitem{} $1$.
+\ansitem{} (D) $-\pi$.
+\ansitem{} $(1,-\sqrt2)$ and $(-1,\sqrt2)$.
 \ansitem{37} The volume is increasing at $\dfrac{21\pi}{160}$ cm$^3$/min.
 \ansitem{38} $\dfrac{d\theta}{dt}=-\dfrac16$ rad/sec; the angle is decreasing.
 \ansitem{39} (D) $\frac43$ m/s.
+\ansitem{} (a) $\dfrac32$ ft/sec; (b) $\dfrac92$ ft/sec; (c) $-\dfrac1{16}$ rad/sec.
+\ansitem{} (a) $2\sqrt2$ cm/sec; (b) $24$ cm$^2$/sec.
 \ansitem{40} (a) $2$; (b) $-7$; (c) $-14$; (d) $21$; (e) $-\dfrac{10}{9}$; (f) $-\dfrac{19}{27}$.
 \ansitem{41} Yes. Both pieces have value $27$ at $x=2$, and both one-sided derivatives equal $54$, so $f'(2)=54$.
 \ansitem{42} (A) $f''(g(x))[g'(x)]^2+f'(g(x))g''(x)$.
 \ansitem{43} Absolute maximum $20$ at $x=-1$; absolute minimum $-\frac43$ at $x=\frac53$.
 \ansitem{44} $r=-1,-\frac1{\sqrt5},\frac1{\sqrt5},1$.
 \ansitem{45} (E) $9$.
+\ansitem{} (a) $3$; (b) four critical numbers, at $x=-2,-1,0,1$; (c) local maxima at $x=-2$ and $x=1$.
+\ansitem{} (D) $20$.
+\ansitem{} $y=x^2$ is increasing on $(0,\infty)$; $y=x^3$ is increasing on $(-\infty,\infty)$.
+\ansitem{} $0$ and $8$.
 \ansitem{46} The polynomial is continuous and differentiable, and $f(-3)=f(3)=118$. The only number is $c=0$.
 \ansitem{47} Yes. The average slope is $2$, and $c=\frac{2-\sqrt7}{3}$ is the only solution in $(-1,1)$.
 \ansitem{48} (B) intersect no more than once.
+\ansitem{} Select (ii) continuous on $[2,5]$ and (iii) differentiable on $(2,5)$.
+\ansitem{} (A)$\to$(1), (B)$\to$(2), (C)$\to$(3), (D)$\to$(4).
+\ansitem{} $c=2$.
 \ansitem{49} Increasing on $(-\infty,\frac35]$ and $[1,\infty)$; decreasing on $[\frac35,1]$. Local maximum $f(\frac35)=\frac{216}{625}$; local minimum $f(1)=0$. The critical number $x=0$ is not an extremum.
 \ansitem{50} Decreasing on $[0,\frac\pi3]$ and $[\frac{5\pi}3,2\pi]$; increasing on $[\frac\pi3,\frac{5\pi}3]$. Local minimum $f(\frac\pi3)=\frac\pi6-\frac{\sqrt3}{2}$; local maximum $f(\frac{5\pi}3)=\frac{5\pi}6+\frac{\sqrt3}{2}$.
 \ansitem{51} One valid answer is $f(x)=\frac74(|x|-2)^2-4$. It has local minima at $(-2,-4)$ and $(2,-4)$ and a cusp-shaped local maximum at $(0,3)$.
+\ansitem{} Select: local maximum at $x=1$; increasing on $(-\infty,0)\cup(0,1)$; decreasing on $(1,\infty)$.
+\ansitem{} Local minimum at $x=-2$ and no local maximum.
 \ansitem{52} No local extrema; increasing on $(-\infty,\infty)$. Concave up on $(-\infty,0)$ and down on $(0,\infty)$. Inflection point $(0,-1)$, with a vertical tangent.
 \ansitem{53} Local maximum $f(-\frac43)=4\sqrt[3]{6}$; local minimum $f(0)=0$. Concave down on $(-\infty,0)$ and $(0,\frac23)$; concave up on $(\frac23,\infty)$. Inflection point $\left(\frac23,4\sqrt[3]{12}\right)$; cusp at the origin.
 \ansitem{54} Decreasing on $(-\infty,0)$, increasing on $(0,2)$, and decreasing on $(2,\infty)$. Local minimum $(0,1)$; local maximum $(2,3)$. Concave up for $x<1$, concave down for $x>1$; inflection at $x=1$ (height not determined).
 \ansitem{55} Increasing on $(-\infty,0)$ and decreasing on $(0,\infty)$, with local maximum $(0,2)$. Concave up on $(-\infty,-2)$ and $(2,\infty)$; concave down on $(-2,2)$. Inflection points $(-2,1)$ and $(2,1)$.
 \ansitem{56} Increasing on $(-\infty,1)$ and decreasing on $(1,\infty)$, with local maximum $(1,4)$. Concave up on both sides of $x=1$. One valid shape has a cusp at $(1,4)$, for example $f(x)=4-\sqrt{|x-1|}$.
 \ansitem{57} One valid graph is $f(x)=\left|\sin\frac{\pi x}{2}\right|$: concave-down arches rise from each even-integer corner $(2n,0)$ to a horizontal maximum $(2n+1,1)$ and return to $(2n+2,0)$.
+\ansitem{} (a) False; (b) False; (c) False.
+\ansitem{} $x=0$ only.
+\ansitem{} (a) Concave up on $(-1,0)\cup(2,4)$; (b) inflection points at $x=-1,0,2$.
 \end{ans}
 \clearpage
 % === SOURCELIST ===
+\iffalse
 \begin{center}{\LARGE\bfseries Where These Questions Came From}\end{center}
 \medskip
 \noindent This guide covers textbook Sections 2.1 through 4.4. For 2.1--4.2, each group uses two textbook exercises not listed anywhere in the 2026--27 calendar's Solve, Recommended Continued Practice, Opener, Challenge, or IP columns, plus one question from the supplied AP packet. The final nine questions reproduce every 4.3--4.4 textbook exercise already collected in the 4.3--4.6 study guide.
@@ -477,5 +800,83 @@
 \item[] \textbf{57} $=$ 4.4 \#37
 \end{itemize}
 \smallskip
+\end{multicols}
+\fi
+\begin{center}{\LARGE\bfseries Where These Questions Came From}\end{center}
+\medskip
+\noindent This guide contains 99 questions. Within each section, the original textbook and AP-packet questions come first, followed by every supplied Section Quiz screenshot for that section. The sources below are listed in the same order as the question numbers in each range.
+\medskip
+\begin{multicols}{2}
+\small
+\noindent\textbf{Section 2.1 (Questions 1--6)}\\
+2.1 \#18; 2.1 \#26; AP Packet p. 13, BC 2 (1993); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 2.2 (Questions 7--9)}\\
+2.2 \#9; 2.2 \#16; AP Packet p. 4, BC 6 (1969).
+
+\smallskip
+\noindent\textbf{Section 2.3 (Questions 10--15)}\\
+2.3 \#28; 2.3 \#65; AP Packet p. 5, BC 10 (1988); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 2.4 (Questions 16--21)}\\
+2.4 \#3; 2.4 \#34; AP Packet p. 2, BC 35 (1988); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 2.5 (Questions 22--24)}\\
+2.5 \#16; 2.5 \#59; AP Packet p. 2, BC 5 (1988).
+
+\smallskip
+\noindent\textbf{Section 3.1 (Questions 25--30)}\\
+3.1 \#2; 3.1 \#16; AP Packet p. 3, BC 4 (1973); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 3.2 (Questions 31--36)}\\
+3.2 \#4; 3.2 \#22; AP Packet p. 3, BC 8 (1985); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 3.3 (Questions 37--43)}\\
+3.3 \#19; 3.3 \#45; AP Packet p. 4, BC 4 (1988); Section Quiz pp. 2--5.
+
+\smallskip
+\noindent\textbf{Section 3.4 (Questions 44--49)}\\
+3.4 \#13; 3.4 \#30; AP Packet p. 5, BC 6 (1985); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 3.5 (Questions 50--52)}\\
+3.5 \#3; 3.5 \#41; AP Packet p. 4, BC 92 (1998).
+
+\smallskip
+\noindent\textbf{Section 3.6 (Questions 53--58)}\\
+3.6 \#53; 3.6 \#82; AP Packet p. 7, BC 39 (1973); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 3.7 (Questions 59--64)}\\
+3.7 \#12; 3.7 \#29; AP Packet p. 8, BC 3 (1998); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 3.8 (Questions 65--69)}\\
+3.8 \#34; 3.8 \#42; AP Packet p. 9, BC 37 (1988); Section Quiz pp. 2--3.
+
+\smallskip
+\noindent\textbf{Section 3.9 (Questions 70--72)}\\
+3.9 \#63; 3.9 \#66; AP Packet p. 7, BC 5 (1998).
+
+\smallskip
+\noindent\textbf{Section 4.1 (Questions 73--79)}\\
+4.1 \#8; 4.1 \#16; AP Packet p. 13, BC 27 (1973); Section Quiz pp. 2--5.
+
+\smallskip
+\noindent\textbf{Section 4.2 (Questions 80--85)}\\
+4.2 \#5; 4.2 \#17; AP Packet p. 3, BC 15 (1969); Section Quiz pp. 2--4.
+
+\smallskip
+\noindent\textbf{Section 4.3 (Questions 86--90)}\\
+4.3 \#7; 4.3 \#19; 4.3 \#35; Section Quiz pp. 1--2.
+
+\smallskip
+\noindent\textbf{Section 4.4 (Questions 91--99)}\\
+4.4 \#9; 4.4 \#11; 4.4 \#31; 4.4 \#33; 4.4 \#34; 4.4 \#37; Section Quiz pp. 2--4.
 \end{multicols}
 \end{document}
