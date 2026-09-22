@@ -69,7 +69,8 @@ Sections 2.2 and 3.5 have no calendar entries, so their supplied textbook pages 
 ## 5. Student-facing layout
 
 - Number the questions continuously from 1 through 57.
-- Do not print section headings, textbook problem numbers, or source labels on the practice or answer pages.
+- Separate every section's question group with a plain black horizontal rule and a section/topic heading, such as “Section 3.8: Related Rates.”
+- Do not print textbook problem numbers or source labels on the practice or answer pages.
 - Put blank work space after every question.
 - Keep multiple-choice answer choices with the question.
 - Put the answer key after all questions.

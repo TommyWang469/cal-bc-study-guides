@@ -17,6 +17,14 @@
 \setlist[ans]{leftmargin=3.0em,itemsep=5pt,topsep=3pt,label={}}
 \newcommand{\ansitem}[1]{\item[\textbf{#1.}]}
 \newcommand{\choices}[5]{\begin{enumerate}[label=\textbf{(\Alph*)},leftmargin=2.4em,itemsep=1pt,topsep=4pt]\item #1\item #2\item #3\item #4\item #5\end{enumerate}}
+\newcommand{\topicdivider}[2]{%
+  \Needspace{11.5cm}%
+  \par\medskip
+  \noindent\textbf{Section #1: #2}\par
+  \vspace{0.25em}
+  \noindent\rule{\linewidth}{0.6pt}\par
+  \medskip
+}
 \begin{document}
 \begin{center}
 {\Huge\bfseries Midterm 1 Study Guide}\\[0.4em]
@@ -24,6 +32,7 @@
 \parbox{0.88\linewidth}{\centering Show all work. Use the blank space after each question. A complete answer key and source list begin after the practice set.}
 \end{center}
 \vspace{0.8em}
+\topicdivider{2.1}{Algebraic and One-Sided Limits}
 \Needspace{7cm}
 \begin{probs}
 \prob{1.} Use an algebraic simplification to help find the limit, if it exists.\[\lim_{x\to25}\frac{\sqrt{x}-5}{x-25}.\] \wsM
@@ -36,6 +45,7 @@
 \begin{probs}
 \prob{3.} If $f(x)=2x^2+1$, then $\displaystyle\lim_{x\to0}\frac{f(x)-f(0)}{x^2}$ is\choices{$0$}{$1$}{$2$}{$4$}{nonexistent} \wsS
 \end{probs}
+\topicdivider{2.2}{The Epsilon-Delta Definition of a Limit}
 \Needspace{7cm}
 \begin{probs}
 \prob{4.} For the given limit $\displaystyle\lim_{x\to4}x^2=16$ and $\varepsilon=0.1$, use the graph of $f$ to find the largest $\delta$ such that if $0<|x-4|<\delta$, then $|f(x)-16|<\varepsilon$. \wsM
@@ -48,6 +58,7 @@
 \begin{probs}
 \prob{6.} What is $\displaystyle\lim_{h\to0}\frac{8(\frac12+h)^8-8(\frac12)^8}{h}$?\choices{$0$}{$\frac12$}{$1$}{The limit does not exist.}{It cannot be determined from the information given.} \wsS
 \end{probs}
+\topicdivider{2.3}{Limit Laws and the Squeeze Theorem}
 \Needspace{7cm}
 \begin{probs}
 \prob{7.} Use theorems on limits to find the limit, if it exists.\[\lim_{x\to-3}\frac{x+3}{(1/x)+(1/3)}.\] \wsM
@@ -60,6 +71,7 @@
 \begin{probs}
 \prob{9.} $\displaystyle\lim_{h\to0}\frac{\sin(x+h)-\sin x}{h}$ is\choices{$0$}{$1$}{$\sin x$}{$\cos x$}{nonexistent} \wsS
 \end{probs}
+\topicdivider{2.4}{Infinite Limits and Asymptotes}
 \Needspace{7cm}
 \begin{probs}
 \prob{10.} For $f(x)=\dfrac{8}{(2x+5)^3}$ and $a=-\dfrac52$, express each limit as $\infty$, $-\infty$, or DNE (Does Not Exist):\[\text{(a) }\lim_{x\to a^-}f(x)\qquad\text{(b) }\lim_{x\to a^+}f(x)\qquad\text{(c) }\lim_{x\to a}f(x).\] \wsM
@@ -72,6 +84,7 @@
 \begin{probs}
 \prob{12.} If $k$ is a positive integer, then $\displaystyle\lim_{x\to+\infty}\frac{x^k}{e^x}$ is\choices{$0$}{$1$}{$e$}{$k!$}{nonexistent} \wsS
 \end{probs}
+\topicdivider{2.5}{Continuity and the Intermediate Value Theorem}
 \Needspace{7cm}
 \begin{probs}
 \prob{13.} Classify the discontinuities of $f$ as removable, jump, or infinite.\[f(x)=\begin{cases}-x^2,&x<1,\\2,&x=1,\\x-2,&x>1.\end{cases}\] \wsM
@@ -84,6 +97,7 @@
 \begin{probs}
 \prob{15.} Let $f$ be defined by \[f(x)=\begin{cases}\sin x,&x<0,\\x^2,&0\le x<1,\\2-x,&1\le x<2,\\x-3,&x\ge2.\end{cases}\] For what values of $x$ is $f$ NOT continuous?\choices{$0$ only}{$1$ only}{$2$ only}{$0$ and $2$ only}{$0$, $1$, and $2$} \wsM
 \end{probs}
+\topicdivider{3.1}{Derivatives from the Limit Definition}
 \Needspace{7cm}
 \begin{probs}
 \prob{16.} Let $f(x)=3-2x^2$. (a) Use the limit definition to find the slope of the tangent line to the graph of $f$ at $P(a,f(a))$. (b) Find an equation of the tangent line at $P(2,f(2))$. \wsM
@@ -96,6 +110,7 @@
 \begin{probs}
 \prob{18.} For what nonnegative value of $b$ is the line $y=-\frac13x+b$ normal to the curve $y=x^3$?\choices{$0$}{$1$}{$\frac43$}{$\frac{10}{3}$}{$\frac{10\sqrt3}{3}$} \wsM
 \end{probs}
+\topicdivider{3.2}{Differentiability and Tangent Lines}
 \Needspace{10cm}
 \begin{probs}
 \prob{19.} Let $f(x)=x^3-4x$ and $P(2,0)$. (a) Use the definition of the derivative to find $f'(x)$. (b) Find the domain of $f'$. (c) Find an equation of the tangent line to the graph of $f$ at $P$. (d) Find the points on the graph at which the tangent line is horizontal. \wsL
@@ -108,6 +123,7 @@
 \begin{probs}
 \prob{21.} If $f$ is a function such that $\displaystyle\lim_{x\to2}\frac{f(x)-f(2)}{x-2}=0$, which statement must be true?\choices{The limit of $f(x)$ as $x$ approaches $2$ does not exist.}{$f$ is not defined at $x=2$.}{$f'(2)=0$.}{$f$ is continuous at $x=0$.}{$f(2)=0$.} \wsS
 \end{probs}
+\topicdivider{3.3}{Product, Quotient, and Higher Derivatives}
 \Needspace{7cm}
 \begin{probs}
 \prob{22.} Find the derivative of $G(v)=\dfrac{v^3-1}{v^3+1}$. \wsM
@@ -120,6 +136,7 @@
 \begin{probs}
 \prob{24.} If $u$, $v$, and $w$ are nonzero differentiable functions, then the derivative of $\dfrac{uv}{w}$ is\choices{$\dfrac{uv'+u'v}{w'}$}{$\dfrac{u'v'w-uvw'}{w^2}$}{$\dfrac{uvw'-u'vw-uv'w}{w^2}$}{$\dfrac{u'vw+uv'w+uvw'}{w^2}$}{$\dfrac{uv'w+u'vw-uvw'}{w^2}$} \wsM
 \end{probs}
+\topicdivider{3.4}{Trigonometric Derivatives}
 \Needspace{7cm}
 \begin{probs}
 \prob{25.} Find the derivative of $h(z)=\dfrac{1-\cos z}{1+\cos z}$. \wsM
@@ -132,6 +149,7 @@
 \begin{probs}
 \prob{27.} If $f(x)=\dfrac{x}{\tan x}$, then $f'(\frac\pi4)=$\choices{$2$}{$\frac12$}{$1+\frac\pi2$}{$\frac\pi2-1$}{$1-\frac\pi2$} \wsM
 \end{probs}
+\topicdivider{3.5}{Linear Approximation and Differentials}
 \Needspace{10cm}
 \begin{probs}
 \prob{28.} Let $y=1/x^2$, $a=3$, and $\Delta x=0.3$. (a) Find general formulas for $\Delta y$ and $dy$. (b) If, for the given values of $a$ and $\Delta x$, $x$ changes from $a$ to $a+\Delta x$, find the values of $\Delta y$ and $dy$. \wsL
@@ -144,6 +162,7 @@
 \begin{probs}
 \prob{30.} Let $f(x)=x^2-2x+3$. The tangent line to the graph of $f$ at $x=2$ is used to approximate $f(x)$. Which is the greatest value of $x$ for which the error is less than $0.5$?\choices{$2.4$}{$2.5$}{$2.6$}{$2.7$}{$2.8$} \wsM
 \end{probs}
+\topicdivider{3.6}{The Chain Rule}
 \Needspace{7cm}
 \begin{probs}
 \prob{31.} Find the derivative of $f(x)=\sin\sqrt{x}+\sqrt{\sin x}$. \wsM
@@ -156,6 +175,7 @@
 \begin{probs}
 \prob{33.} Let $f$ and $g$ be differentiable, with $f(1)=2$, $f'(1)=3$, $f'(2)=-4$, $g(1)=2$, $g'(1)=-3$, and $g'(2)=5$. If $h(x)=f(g(x))$, then $h'(1)=$\choices{$-9$}{$-4$}{$0$}{$12$}{$15$} \wsM
 \end{probs}
+\topicdivider{3.7}{Implicit Differentiation}
 \Needspace{7cm}
 \begin{probs}
 \prob{34.} Assuming that the equation $x=\sin(xy)$ determines a differentiable function $f$ such that $y=f(x)$, find $y'$. \wsM
@@ -168,6 +188,7 @@
 \begin{probs}
 \prob{36.} The slope of the line tangent to the curve $y^2+(xy+1)^3=0$ at $(2,-1)$ is\choices{$-\frac32$}{$-\frac34$}{$0$}{$\frac34$}{$\frac32$} \wsM
 \end{probs}
+\topicdivider{3.8}{Related Rates}
 \Needspace{10cm}
 \begin{probs}
 \prob{37.} A metal rod has the shape of a right circular cylinder. As it is being heated, its length is increasing at a rate of $0.005$ cm/min and its diameter is increasing at $0.002$ cm/min. At what rate is the volume changing when the rod has length $40$ centimeters and diameter $3$ centimeters? \wsL
@@ -180,6 +201,7 @@
 \begin{probs}
 \prob{39.} A person $2$ meters tall walks directly away from a streetlight $8$ meters above the ground. The person's shadow is lengthening at $\frac49$ meter per second. At what rate, in meters per second, is the person walking?\choices{$\frac4{27}$}{$\frac49$}{$\frac34$}{$\frac43$}{$\frac{16}{9}$} \wsM
 \end{probs}
+\topicdivider{3.9}{Chapter 3 Derivative Review}
 \Needspace{10cm}
 \begin{probs}
 \prob{40.} Suppose $f$ and $g$ are functions such that $f(2)=-1$, $f'(2)=4$, $f''(2)=-2$, $g(2)=-3$, $g'(2)=2$, and $g''(2)=1$. Find the value of each of the following at $x=2$: (a) $(2f-3g)'$; (b) $(2f-3g)''$; (c) $(fg)'$; (d) $(fg)''$; (e) $\left(\dfrac fg\right)'$; (f) $\left(\dfrac fg\right)''$. \wsL
@@ -192,6 +214,7 @@
 \begin{probs}
 \prob{42.} If $f$ and $g$ are twice differentiable and $h(x)=f(g(x))$, then $h''(x)=$\choices{$f''(g(x))[g'(x)]^2+f'(g(x))g''(x)$}{$f''(g(x))g'(x)+f'(g(x))g''(x)$}{$f''(g(x))[g'(x)]^2$}{$f''(g(x))g''(x)$}{$f''(g(x))$} \wsM
 \end{probs}
+\topicdivider{4.1}{Extrema and Critical Numbers}
 \Needspace{10cm}
 \begin{probs}
 \prob{43.} Find the extrema of $f$ on the given interval. \[f(x)=3x^2-10x+7,\qquad[-1,3].\] \wsL
@@ -204,6 +227,7 @@
 \begin{probs}
 \prob{45.} If $f(x)=\frac13x^3-4x^2+12x-5$ on $0\le x\le9$, then the absolute maximum value of $f$ occurs when $x$ is\choices{$0$}{$2$}{$4$}{$6$}{$9$} \wsM
 \end{probs}
+\topicdivider{4.2}{Rolle's Theorem and the Mean Value Theorem}
 \Needspace{10cm}
 \begin{probs}
 \prob{46.} Show that $f$ satisfies the hypotheses of Rolle's theorem on $[a,b]$, and find all $c$ in $(a,b)$ such that $f'(c)=0$. \[f(x)=x^4+4x^2+1,\qquad[-3,3].\] \wsL
@@ -216,6 +240,7 @@
 \begin{probs}
 \prob{48.} If $f'(x)$ and $g'(x)$ exist and $f'(x)>g'(x)$ for all real $x$, then the graphs of $y=f(x)$ and $y=g(x)$\choices{intersect exactly once.}{intersect no more than once.}{do not intersect.}{could intersect more than once.}{have a common tangent at each intersection.} \wsS
 \end{probs}
+\topicdivider{4.3}{Increasing, Decreasing, and the First Derivative Test}
 \Needspace{10cm}
 \begin{probs}
 \prob{49.} Find the local extrema of $f$, the intervals on which $f$ is increasing or decreasing, and sketch its graph.\[f(x)=10x^3(x-1)^2.\] \wsL
@@ -228,6 +253,7 @@
 \begin{probs}
 \prob{51.} Sketch a continuous function $f$ satisfying all the conditions: \[\begin{gathered} f(0)=3,\quad f(-2)=f(2)=-4,\quad f'(0)\text{ is undefined},\\ f'(-2)=f'(2)=0,\\ f'(x)>0\text{ if }-2<x<0\text{ or }x>2,\\ f'(x)<0\text{ if }x<-2\text{ or }0<x<2. \end{gathered}\] \wsL
 \end{probs}
+\topicdivider{4.4}{Concavity and the Second Derivative Test}
 \Needspace{10cm}
 \begin{probs}
 \prob{52.} Find the local extrema of $f$, using the second derivative test whenever applicable. Find the intervals of concavity, the $x$-coordinates of the inflection points, and sketch the graph.\[f(x)=\sqrt[5]{x}-1.\] \wsL
