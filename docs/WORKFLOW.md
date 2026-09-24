@@ -3,6 +3,14 @@
 How to build one of these from scratch. Written after the 2.1–2.5 guide (August 2026), which
 is the working example — copy that `.tex` as the starting template every week.
 
+## Folder layout
+
+- Put each guide in `guides/<range-or-topic>/`, with its TeX, compiled PDF, and figures together.
+- Source materials live under `sources/textbook/`, `sources/ap-packets/`,
+  `sources/section-quizzes/`, and `sources/course-calendar/`.
+- Run the build and verification commands below from the guide's own folder.
+- See [the repository index](../README.md) for current files and combined screenshot PDFs.
+
 ---
 
 ## 1. What I need from Tommy
@@ -57,7 +65,7 @@ unless Tommy explicitly requests a different format.
   and source list each start on a new page. “Just questions for practice” removes introductory
   teaching material; it does not remove the workflow's answer key or source list unless requested.
 
-`related-rates-study-guide.tex` is the current example of this plain, questions-first layout.
+[`related-rates-study-guide.tex`](../guides/related-rates/related-rates-study-guide.tex) is the current example of this plain, questions-first layout.
 If an older template uses color or introductory material, remove it when creating a new guide.
 
 The number map (`8 = 2.1 #17`, …) is no longer a hidden comment block — it renders, once, as the
@@ -185,8 +193,8 @@ Use `\vspace*` (starred!) so a blank is never silently swallowed at a page break
 
 1. **Read the practice table.** Write the list out; note the two clusters.
 2. **Transcribe every problem from the page photos.** Crop and zoom rather than squinting — see §7.
-3. **Crop graph problems out of the source photo and save them as PNGs** in the repo folder,
-   named `fig-q<n>.png`, then `\includegraphics` them. Do not describe a graph in words; the
+3. **Crop graph problems out of the source photo and save them as PNGs** beside the guide TeX,
+   named `fig-<range>-q<n>.png`, then `\includegraphics` them. Do not describe a graph in words; the
    student can't solve from prose. Crop tight to the axes — leave the textbook's problem number
    and the neighbouring problems' text outside the crop, or the figure leaks the source.
    (TikZ redraws are no longer required; the old `\gaxes` / `hole` / `fdot` / `cline` styles in
@@ -276,9 +284,9 @@ Must be empty. The fix is a `\clearpage` before the block that overflowed, not l
   missing left branch in the `x → 0⁻` graph was confirmed.
 
 **Figure filenames must carry the guide's section range**
-- `fig-<range>-q<n>.png`, e.g. `fig-4.3-4.6-q17.png` — never bare `fig-q17.png`. All the guides
-  live in one flat folder, question numbers restart at 1 every week, so two guides that both
-  have a figure on question 17 will overwrite each other. That is not hypothetical: building the
+- `fig-<range>-q<n>.png`, e.g. `fig-4.3-4.6-q17.png` — never bare `fig-q17.png`. Keep figures beside their guide in `guides/<range-or-topic>/`. Question numbers restart
+  at 1 every week; keeping the section range in filenames also prevents collisions when
+  figures are copied between folders or uploaded together to Overleaf. That is not hypothetical: building the
   4.3–4.6 guide destroyed the 3.4–3.9 guide's `fig-q17.png` this way, and it was unrecoverable
   (no Trash copy, source screenshots already deleted, no compiled PDF to pull it back out of).
 - Before writing any figure, check whether the name is already taken: `ls fig-*` first.
@@ -316,7 +324,7 @@ Must be empty. The fix is a `\clearpage` before the block that overflowed, not l
 - [ ] Practice questions first, then answer key, then source list; key and sources start on new pages
 - [ ] Practice table read; both clusters identified
 - [ ] Every listed problem transcribed; missing pages reported
-- [ ] Graph problems cropped to `fig-q<n>.png` in the repo folder, cropped tight enough not to
+- [ ] Graph problems cropped to `fig-<range>-q<n>.png` beside the guide TeX, cropped tight enough not to
       show the textbook problem number, and listed for Tommy to upload to Overleaf
 - [ ] Numbered 1…N; zero section/exercise/theorem references above the `SOURCELIST` marker
 - [ ] Source list on the last page: every 1…N entry, grouped by section, Tommy 1/2 marked original

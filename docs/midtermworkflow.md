@@ -1,10 +1,10 @@
 # Midterm 1 Study Guide Workflow
 
-This workflow is for the cumulative Calculus BC Midterm 1 guide. It replaces the weekly question-selection rules in WORKFLOW.md where the rules below differ.
+This workflow is for the cumulative Calculus BC Midterm 1 guide. It replaces the weekly question-selection rules in [WORKFLOW.md](WORKFLOW.md) where the rules below differ.
 
 ## 1. Scope
 
-- Use the exact worksheet named **26-27** in Calendar BC 2019 and on-2.xlsx.
+- Use the exact worksheet named **26-27** in `sources/course-calendar/Calendar BC 2019 and on-2.xlsx` (path relative to the repository root).
 - The midterm entry is dated September 28, 2026 and says “MidTerm 1 (2.1 - 4.4).”
 - Cover every numbered section from 2.1 through 4.4, including 2.2 and 3.5 even though those two labels do not appear in the 26-27 calendar.
 - Treat 3.9 as the Chapter 3 review section represented by the supplied 3.9 pages.
@@ -21,7 +21,7 @@ For each section from 2.1 through 4.2:
 For 4.3 and 4.4:
 
 - Do not use the three-question rule.
-- Carry over every 4.3 and 4.4 textbook exercise already transcribed in study-guide-4.3-4.6.tex.
+- Carry over every 4.3 and 4.4 textbook exercise already transcribed in `guides/4.3-4.6/study-guide-4.3-4.6.tex`.
 - This produces three exercises from 4.3 and six from 4.4.
 
 After selecting the original midterm questions, append every supplied Section Quiz screenshot question to its matching section. Keep the screenshot order within each section. If a screenshot contains a graph, redraw it clearly in black and white or crop the graph without the Schoology interface.
@@ -62,7 +62,7 @@ Sections 2.2 and 3.5 have no calendar entries, so their supplied textbook pages 
 
 ## 4. Source handling
 
-1. Run markitdown on every PDF, spreadsheet, and screenshot first.
+1. Find sources under `sources/textbook/`, `sources/ap-packets/`, `sources/section-quizzes/`, and `sources/course-calendar/`. The quiz screenshots are also combined in `sources/section-quizzes/section-quizzes-2.1-4.4.pdf`; the textbook screenshot supplement is in `sources/textbook/textbook-screenshot-supplement.pdf`. Run markitdown on every PDF, spreadsheet, and screenshot first.
 2. If a scan has no text layer, render it at readable resolution and inspect the image.
 3. Transcribe the full exercise, including all parts and necessary conditions.
 4. Preserve mathematical meaning while removing textbook exercise ranges and theorem numbers from the student-facing question.
@@ -91,7 +91,7 @@ Sections 2.2 and 3.5 have no calendar entries, so their supplied textbook pages 
 
 ## 7. Final checks
 
-1. Compile with: tectonic midterm1-study-guide-2.1-4.4.tex
+1. From the repository root, run `cd guides/midterm-1`, then compile with `tectonic midterm1-study-guide-2.1-4.4.tex`.
 2. Confirm that the rendered question and answer numbers both run from 1 through 99 with no gaps.
 3. Confirm exactly one workspace macro follows each question.
 4. Confirm the source list has exactly one entry for every question.
@@ -102,6 +102,6 @@ Sections 2.2 and 3.5 have no calendar entries, so their supplied textbook pages 
 
 ## 8. Files delivered
 
-- midterm1-study-guide-2.1-4.4.tex
-- midterm1-study-guide-2.1-4.4.pdf
-- midtermworkflow.md
+- `guides/midterm-1/midterm1-study-guide-2.1-4.4.tex`
+- `guides/midterm-1/midterm1-study-guide-2.1-4.4.pdf`
+- `docs/midtermworkflow.md`

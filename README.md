@@ -1,61 +1,46 @@
-# Cal BC Study Guides
+# Calculus BC Study Guides
 
-Weekly LaTeX practice sheets for a Calculus BC class — questions, work space, answer key, and a
-source list, all in one file per week.
+Practice guides, class source materials, and the workflows used to prepare them.
 
-## What's here
+## Study guides
 
-| File | Sections | Notes |
-|---|---|---|
-| `study-guide-4.3-4.6.tex` | 4.3–4.6 | Current template. 18 problems + three original problems, four screenshot figures |
-| `study-guide-3.4-3.9.tex` | 3.4–3.9 | First guide in the one-file layout. Has the AP-packet and multiple-choice layouts |
-| `study-guide-2.1-2.5.tex` | 2.1–2.5 | Predates the one-file layout; keeps the TikZ figure macros |
-| `answer-key-2.1-2.5.tex` | 2.1–2.5 | Retired split answer key, kept for reference |
-| `WORKFLOW.md` | — | How a guide gets built, start to finish. The spec |
+Each folder keeps the guide's TeX source, available PDF, and required figures together.
 
-Figures are named `fig-<sections>-q<n>.png` — the guide they belong to, then the question number
-they carry in it. They must sit beside the `.tex` when it is compiled.
+| Guide | Files |
+|---|---|
+| Midterm 1: Sections 2.1–4.4 | [PDF](guides/midterm-1/midterm1-study-guide-2.1-4.4.pdf) · [TeX](guides/midterm-1/midterm1-study-guide-2.1-4.4.tex) |
+| Related rates | [PDF](guides/related-rates/related-rates-study-guide.pdf) · [TeX](guides/related-rates/related-rates-study-guide.tex) · [Overleaf ZIP](guides/related-rates/related-rates-overleaf.zip) |
+| Sections 4.3–4.6 | [PDF](guides/4.3-4.6/study-guide-4.3-4.6.pdf) · [TeX](guides/4.3-4.6/study-guide-4.3-4.6.tex) |
+| Sections 3.4–3.9 | [TeX and available figure](guides/3.4-3.9/) |
+| Sections 2.1–2.5 | [TeX and legacy separate answer key](guides/2.1-2.5/) |
 
-> **Missing file:** `fig-3.4-3.9-q17.png` is not in this repo. It was lost on 2026-09-08 when the
-> 4.3–4.6 guide wrote its own `fig-q17.png` over it, back when figures used flat `fig-q<n>.png`
-> names and the two guides collided at 17. Names are namespaced per guide now, so it cannot
-> recur. To restore it, copy `fig-q17.png` out of the 3.4–3.9 Overleaf project and save it here
-> under the new name. Until then `study-guide-3.4-3.9.tex` will not compile.
+**Existing missing figure:** `guides/3.4-3.9/fig-3.4-3.9-q17.png` was already missing before this reorganization. That guide cannot compile until the figure is restored from the old Overleaf project. The other figures remain beside their TeX files.
 
-## Building
+## Source materials
+
+| Folder | Contents |
+|---|---|
+| [Section quizzes](sources/section-quizzes/) | [Combined 42-page PDF](sources/section-quizzes/section-quizzes-2.1-4.4.pdf), with section bookmarks; renamed originals in `screenshots/` |
+| [Textbook](sources/textbook/) | Homework PDFs by section; [9-page screenshot supplement](sources/textbook/textbook-screenshot-supplement.pdf) for sections 2.2, 3.5, 4.1, and 4.2; renamed originals in `screenshots/` |
+| [AP packets](sources/ap-packets/) | Original AP packet PDFs, retaining their source filenames |
+| [Course calendar](sources/course-calendar/) | Calendar workbook and a September–October screenshot from the 2026–2027 sheet |
+
+Quiz screenshot names use the section and the question number displayed in Schoology, for example `section-2.1-quiz-question-02.png`. Numbering gaps reflect the supplied screenshots; no missing questions were invented. Textbook screenshot names use the section and an ordered screenshot number, not a printed textbook page number.
+
+The combined PDFs preserve every original screenshot at full resolution, one image per page. All original PNGs are retained. [File move history](docs/file-moves.csv) records every old filename, new location, and original SHA-256 checksum.
+
+## Workflows and building
+
+- [Weekly study-guide workflow](docs/WORKFLOW.md)
+- [Midterm 1 workflow](docs/midtermworkflow.md)
+
+Compile from the guide's own folder so relative figure paths resolve:
 
 ```sh
+cd guides/4.3-4.6
 tectonic study-guide-4.3-4.6.tex
 ```
 
-Produces the PDF in place. Any LaTeX toolchain works; the documents use only `geometry`,
-`amsmath`, `amssymb`, `enumitem`, `graphicx` and `multicol`.
+For Overleaf, upload the TeX and figures from the same guide folder, or use the related-rates ZIP. New guides should follow the current workflow's questions → answer key → source list layout; older guides retain their original content.
 
-## Structure of a guide
-
-```
-questions + figures + work space
-\clearpage
-Tommy's Questions          three original problems, easy → hard
-\clearpage
-answer key                 answers only for the numbered problems,
-                           full worked solutions for the original ones
-\clearpage
-% === SOURCELIST ===
-where each question came from
-```
-
-Problems are renumbered `1…N` and every textbook reference is stripped, so a student solving the
-sheet can't tell which section a question came from. Sources appear in exactly one place: the
-list on the final page, so anyone who misses a problem can look up its neighbours for more
-practice.
-
-`WORKFLOW.md` has the rest — the work-space macros, the verification steps, and the gotchas
-worth not rediscovering.
-
-## Note on sources
-
-The numbered problems are transcribed from a course textbook and the figures are cropped from
-its pages; they are reproduced here for classroom practice. Rights to that material belong to
-its publisher. The problems under **Tommy's Questions**, the answer keys and `WORKFLOW.md` are
-original.
+Source exercises and figures are reproduced for classroom practice; rights remain with their respective publishers.
