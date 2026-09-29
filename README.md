@@ -8,6 +8,7 @@ Each folder keeps the guide's TeX source, available PDF, and required figures to
 
 | Guide | Files |
 |---|---|
+| Weekly: Sections 5.7–6.2 | [PDF](guides/5.7-6.2/study-guide-5.7-6.2.pdf) · [TeX](guides/5.7-6.2/study-guide-5.7-6.2.tex) · [Overleaf ZIP](guides/5.7-6.2/study-guide-5.7-6.2-overleaf.zip) |
 | Midterm 1: Sections 2.1–4.4 | [PDF](guides/midterm-1/midterm1-study-guide-2.1-4.4.pdf) · [TeX](guides/midterm-1/midterm1-study-guide-2.1-4.4.tex) |
 | Related rates | [PDF](guides/related-rates/related-rates-study-guide.pdf) · [TeX](guides/related-rates/related-rates-study-guide.tex) · [Overleaf ZIP](guides/related-rates/related-rates-overleaf.zip) |
 | Sections 4.3–4.6 | [PDF](guides/4.3-4.6/study-guide-4.3-4.6.pdf) · [TeX](guides/4.3-4.6/study-guide-4.3-4.6.tex) |
