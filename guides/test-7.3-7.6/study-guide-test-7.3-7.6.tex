@@ -1,0 +1,267 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=.75in,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,enumitem,fancyhdr,tikz}
+\pagestyle{fancy}\fancyhf{}\lhead{\small Test Practice: 7.3--7.6}\rhead{\small Calculus BC}\cfoot{\thepage}
+\setlength{\parindent}{0pt}
+\newcommand{\wsS}{\vspace*{3cm}}
+\newcommand{\wsM}{\vspace*{4.5cm}}
+\newcommand{\wsL}{\vspace*{6.5cm}}
+\newcommand{\wsG}{\vspace*{2cm}}
+\newcommand{\prob}[1]{\par\noindent\textbf{#1.}\quad}
+\newcommand{\ansitem}[1]{\item[\textbf{#1.}]}
+\begin{document}
+Name: \rule{2.8in}{.4pt}\hfill Date: \rule{1.2in}{.4pt}\par\medskip
+\prob{1} Find $f'(x)$ if $f(x)=e^{1-x^3}$.
+\wsL
+\vfill
+\prob{2} Find $f'(x)$ if $f(x)=\dfrac{e^x}{x^2+1}$.
+\wsL
+\clearpage
+\prob{3} Find $f'(x)$ if $f(x)=e^{1/x}+\dfrac1{e^x}$.
+\wsL
+\vfill
+\prob{4} Find $f'(x)$ if $f(x)=e^{-2x}\ln x$.
+\wsL
+\clearpage
+\prob{5} Find $f'(x)$ if $f(x)=e^{3x}\tan\sqrt{x}$.
+\wsL
+\vfill
+\prob{6} Find $f'(x)$ if $f(x)=\sec^2(e^{-4x})$.
+\wsL
+\clearpage
+\prob{7} Find $f'(x)$ if $f(x)=\ln(\csc(e^{3x}))$.
+\wsL
+\vfill
+\prob{8} Use implicit differentiation to find $y\prime$ if $xe^y+2x-\ln(y+1)=3$.
+\wsL
+\clearpage
+\prob{9} Find an equation of the tangent line to $y=x-e^{-x}$ that is parallel to $6x-2y=7$.
+\wsL
+\vfill
+\prob{10} For $f(x)=xe^{-x}$, find the local extrema, intervals of increase and decrease, concavity, and inflection points. Sketch the graph.
+\wsL
+\clearpage
+\prob{11} The rate $R$ at which a tumor grows is related to its size $x$ by $R=rx\ln(K/x)$, where $r,K>0$. Show that growth is most rapid when $x=e^{-1}K$.
+\wsL
+\vfill
+\prob{12} A nerve fiber has axon radius $r$ and insulation radius $R$, with $0<r<R$. Its impulse velocity is $v=-k(r/R)^2\ln(r/R)$, where $k>0$. Find the ratio $r/R$ that maximizes $v$.
+\wsL
+\clearpage
+\prob{13} Evaluate (a) $\displaystyle\int \frac1{4-5x}\,dx$; (b) $\displaystyle\int_{-1}^{0} \frac1{4-5x}\,dx$.
+\wsL
+\vfill
+\prob{14} Evaluate (a) $\displaystyle\int \frac{4x}{x^2-9}\,dx$; (b) $\displaystyle\int_{1}^{2} \frac{4x}{x^2-9}\,dx$.
+\wsL
+\clearpage
+\prob{15} Evaluate (a) $\displaystyle\int e^{-4x}\,dx$; (b) $\displaystyle\int_{1}^{3} e^{-4x}\,dx$.
+\wsL
+\vfill
+\prob{16} Evaluate (a) $\displaystyle\int\cot(x/3)\,dx$; (b) $\displaystyle\int_{3\pi/2}^{9\pi/4}\cot(x/3)\,dx$.
+\wsL
+\clearpage
+\prob{17} Evaluate $\displaystyle\int(\tan3x+\sec3x)\,dx$.
+\wsL
+\vfill
+\prob{18} Find the area bounded by $y=e^{2x}$, $y=0$, $x=0$, and $x=\ln3$.
+\wsL
+\clearpage
+\prob{19} The region bounded by $y=\sec x$, $x=-\pi/3$, $x=\pi/3$, and $y=0$ is revolved about the $x$-axis. Find the volume.
+\wsL
+\vfill
+\prob{20} A probability density function on $[a,b]$ is nonnegative and has integral $1$. Determine $c$ so that $f(x)=cx/(x^2+4)$ on $0\leq x\leq3$ is a probability density function.
+\wsL
+\clearpage
+\prob{21} In a circuit, the current is $I(t)=10e^{-4t}$ amperes. If $Q$ is charge in coulombs, $I=dQ/dt$. (a) Find $Q(t)$ if $Q(0)=0$. (b) Find the charge after a long period of time.
+\wsL
+\vfill
+\prob{22} Find $f'(x)$ if $f(x)=7^x$.
+\wsL
+\clearpage
+\prob{23} Find $f'(x)$ if $f(x)=\log_3|6x-7|$.
+\wsL
+\vfill
+\prob{24} Find $f'(x)$ if $f(x)=\log\sqrt{x^2+1}$.
+\wsL
+\clearpage
+\prob{25} Find $f'(x)$ if $f(x)=x^\pi\pi^x$.
+\wsL
+\vfill
+\prob{26} Find $f'(x)$ if $f(x)=4^{\sec3x}$.
+\wsL
+\clearpage
+\prob{27} Evaluate $\displaystyle\int10^{3x}\,dx$.
+\wsL
+\vfill
+\prob{28} Evaluate $\displaystyle\int\frac{2^x}{2^x+1}\,dx$.
+\wsL
+\clearpage
+\prob{29} Evaluate $\displaystyle\int\frac1{x\log x}\,dx$.
+\wsL
+\vfill
+\prob{30} Evaluate (a) $\displaystyle\int\pi^x\,dx$; (b) $\displaystyle\int x^4\,dx$; (c) $\displaystyle\int x^\pi\,dx$; (d) $\displaystyle\int\pi x\,dx$.
+\wsL
+\clearpage
+\prob{31} Find the area bounded by $y=2^x$, $x+y=1$, and $x=1$.
+\wsL
+\vfill
+\prob{32} The region under $y=3^{-x}$ from $x=1$ to $x=2$ is revolved about the $x$-axis. Find the volume.
+\wsL
+\clearpage
+\prob{33} A city has population $500{,}000$. Its population increases at $5\%$ per year, with rate proportional to population. What will the population be in $10$ years?
+\wsL
+\vfill
+\prob{34} Assume one quarter acre is required to feed one person and $10$ billion acres are tillable, giving a maximum sustainable population of $40$ billion. At the beginning of 1980 the population was $4.5$ billion. If population grows continuously at $2\%$ per year, with rate proportional to population, when is the maximum reached?
+\wsL
+\clearpage
+\prob{35} A metal plate cools from $180^\circ$F to $150^\circ$F in $20$ minutes in air at $60^\circ$F. Use Newton\textquotesingle s law of cooling to estimate (a) its temperature after one hour and (b) when it reaches $100^\circ$F.
+\wsL
+\vfill
+\prob{36} At $600$ K, nitrogen dioxide decomposes according to $dy/dt=-0.05y^2$, where $y(t)$ is concentration in moles per liter and $t$ is in seconds. Express $y$ in terms of $t$ and its initial concentration $y_0>0$.
+\wsL
+\clearpage
+\prob{37} Let $I_0>0$ be the incoming radiation intensity, $\rho(h)$ the atmospheric density, and $k>0$ an absorption constant. Define $f(x)=k\int_0^x\rho(h)\,dh$ and $I(x)=I_0e^{-f(x)}$. Show that $dI/dx=-k\rho(x)I$.
+\wsL
+\clearpage
+\section*{Tommy's Questions}
+\prob{Tommy 1} Let $f(x)=xe^{-x}$ for $x\geq0$.
+\begin{enumerate}[label=(\alph*)]
+\item Find $f\prime(x)$ and $f\prime\prime(x)$.
+\item Find the absolute maximum value of $f$ on $[0,\infty)$.
+\item Find the exact area under $f\prime$ and above the $x$-axis on $[0,1]$.
+\item Find $b>1$ such that $\int_0^b f\prime(x)\,dx=\int_b^\infty f\prime(x)\,dx$, or show that no such $b$ exists. Interpret the latter integral as a limit.
+\end{enumerate}
+\wsL\clearpage
+\prob{Tommy 2} An object cools according to Newton's law in a room of constant, unknown temperature. Its temperature is $100^\circ$C initially, $70^\circ$C after $10$ minutes, and $55^\circ$C after $20$ minutes. How many minutes after cooling begins does its temperature first reach $41.875^\circ$C?
+\wsL\clearpage
+\prob{Tommy 3} For $1\leq x\leq\sqrt2$, let $T(x)$ be the value of the convergent infinite power tower
+\[T(x)=x^{x^{x^{\cdot^{\cdot^{\cdot}}}}}.
+\]
+Use the continuous branch with $T(1)=1$ and $T(\sqrt2)=2$. Evaluate exactly
+\[\lim_{b\to\sqrt2^-}\int_1^b \frac{T(x)}{x[1-T(x)\ln x]}\,dx.\]
+\wsL\clearpage
+\section*{Answer Key}
+\begin{description}[leftmargin=2.1em,labelwidth=1.8em,itemsep=8pt]
+\ansitem{1} $- 3 x^{2} e^{1 - x^{3}}$.
+\ansitem{2} $- \frac{2 x e^{x}}{\left(x^{2} + 1\right)^{2}} + \frac{e^{x}}{x^{2} + 1}$.
+\ansitem{3} $- e^{- x} - \frac{e^{\frac{1}{x}}}{x^{2}}$.
+\ansitem{4} $- 2 e^{- 2 x} \log{\left(x \right)} + \frac{e^{- 2 x}}{x}$.
+\ansitem{5} $3 e^{3 x} \tan{\left(\sqrt{x} \right)} + \frac{\left(\tan^{2}{\left(\sqrt{x} \right)} + 1\right) e^{3 x}}{2 \sqrt{x}}$.
+\ansitem{6} $- 8 e^{- 4 x} \tan{\left(e^{- 4 x} \right)} \sec^{2}{\left(e^{- 4 x} \right)}$.
+\ansitem{7} $- 3 e^{3 x} \cot{\left(e^{3 x} \right)}$.
+\ansitem{8} $y\prime=- \frac{\left(y + 1\right) \left(e^{y} + 2\right)}{x \left(y + 1\right) e^{y} - 1}$.
+\ansitem{9} $y=3x+2\ln2-2$, at $(-\ln2,-\ln2-2)$.
+\ansitem{10} Local maximum $(1,e^{-1})$; no local minimum. Increasing on $(-\infty,1)$, decreasing on $(1,\infty)$. Concave down on $(-\infty,2)$ and up on $(2,\infty)$; inflection $(2,2e^{-2})$. Passes through $(0,0)$; $f(x)\to-\infty$ as $x\to-\infty$ and $f(x)\to0^+$ as $x\to\infty$.
+\ansitem{11} $R\prime=r[\ln(K/x)-1]$ vanishes only at $x=K/e$; $R\prime\prime=-r/x<0$. Maximum rate $rK/e$.
+\ansitem{12} $r/R=e^{-1/2}\approx0.606531$; $v_{\max}=k/(2e)$.
+\ansitem{13} (a) $-\frac15\ln|4-5x|+C$; (b) $\frac15\ln(9/4)$.
+\ansitem{14} (a) $2\ln|x^2-9|+C$; (b) $2\ln(5/8)$.
+\ansitem{15} (a) $- \frac{e^{- 4 x}}{4}+C$; (b) $- \frac{1 - e^{8}}{4 e^{12}}$.
+\ansitem{16} (a) $3\ln|\sin(x/3)|+C$; (b) $-\frac32\ln2$.
+\ansitem{17} $-\frac13\ln|\cos3x|+\frac13\ln|\sec3x+\tan3x|+C$.
+\ansitem{18} $4$.
+\ansitem{19} $2\pi\sqrt3$.
+\ansitem{20} $c=2/\ln(13/4)$.
+\ansitem{21} (a) $Q(t)=\frac52(1-e^{-4t})$ coulombs; (b) $\frac52$ coulombs.
+\ansitem{22} $7^{x} \log{\left(7 \right)}$.
+\ansitem{23} $\frac{6}{\left(6 x - 7\right) \log{\left(3 \right)}}$.
+\ansitem{24} $\frac{x}{\left(x^{2} + 1\right) \log{\left(10 \right)}}$.
+\ansitem{25} $\pi^{x} x^{\pi} \log{\left(\pi \right)} + \frac{\pi \pi^{x} x^{\pi}}{x}$.
+\ansitem{26} $3 \cdot 4^{\sec{\left(3 x \right)}} \log{\left(4 \right)} \tan{\left(3 x \right)} \sec{\left(3 x \right)}$.
+\ansitem{27} $10^{3x}/(3\ln10)+C$.
+\ansitem{28} $\ln(2^x+1)/\ln2+C$.
+\ansitem{29} $(\ln10)\ln|\ln x|+C$.
+\ansitem{30} (a) $\pi^x/\ln\pi+C$; (b) $x^5/5+C$; (c) $x^{\pi+1}/(\pi+1)+C$; (d) $\pi x^2/2+C$.
+\ansitem{31} $1/\ln2-1/2$.
+\ansitem{32} $4\pi/(81\ln3)$.
+\ansitem{33} $500000e^{0.5}\approx824361$ people.
+\ansitem{34} $50\ln(40/4.5)\approx109.240$ years after the beginning of 1980, during 2089.
+\ansitem{35} (a) $60+120(3/4)^3=110.625^\circ$F; (b) $20\ln(1/3)/\ln(3/4)\approx76.377$ minutes after cooling begins.
+\ansitem{36} $y(t)=y_0/(1+0.05y_0t)$ for $t\geq0$.
+\ansitem{37} $I\prime(x)=-I_0e^{-f(x)}f\prime(x)=-k\rho(x)I(x)$.
+\end{description}
+\clearpage\section*{Tommy's Questions: Solutions}
+\textbf{Tommy 1.}
+(a) By the product rule,
+\[f\prime(x)=e^{-x}(1-x),\qquad f\prime\prime(x)=e^{-x}(x-2).\]
+(b) The first derivative is positive for $0\leq x<1$ and negative for $x>1$. Thus the absolute maximum is $f(1)=1/e$.
+
+(c) Since $f\prime\geq0$ on $[0,1]$, the requested area is
+\[\int_0^1 f\prime(x)\,dx=f(1)-f(0)=1/e.\]
+(d) The two signed integrals are
+\[\int_0^b f\prime(x)\,dx=be^{-b},\qquad
+\lim_{M\to\infty}\int_b^M f\prime(x)\,dx=-be^{-b}.\]
+For every finite $b>1$, the first is positive and the second negative, so no such $b$ exists. Equality of areas would use the negative of the second integral; it is not equality of these signed integrals.
+
+\bigskip\textbf{Tommy 2.}
+Write $\theta$ for room temperature and $q=e^{10k}$, where $k<0$. Newton's law gives
+\[100-\theta=A,\quad70-\theta=Aq,\quad55-\theta=Aq^2.\]
+Subtract successive readings:
+\[30=A(1-q),\qquad15=Aq(1-q).\]
+Hence $q=1/2$, $A=60$, and $\theta=40$. Therefore
+\[T(t)=40+60\,2^{-t/10}.\]
+The target temperature satisfies
+\[41.875-40=1.875=60/32=60\,2^{-5}.\]
+Thus $t/10=5$ and $\boxed{t=50\text{ minutes}}$.
+
+\bigskip\textbf{Tommy 3.}
+The tail of the tower is the same tower, so $T=x^T$. Taking natural logarithms,
+\[\ln T=T\ln x.\]
+Implicit differentiation for $1<x<\sqrt2$ gives
+\[\frac{T\prime}{T}=T\prime\ln x+\frac{T}{x},\qquad
+\frac{T\prime}{T}=\frac{T}{x(1-T\ln x)}.\]
+The integrand is therefore the derivative of $\ln T$. For $b<\sqrt2$,
+\[\int_1^b\frac{T(x)}{x[1-T(x)\ln x]}\,dx=\ln T(b)-\ln T(1).\]
+By continuity of the specified branch, the limit is $\boxed{\ln2}$. The denominator at the upper endpoint is $1-\ln2>0$, so the expression also extends continuously to that endpoint.
+\clearpage
+% === SOURCELIST ===
+\section*{Source List}
+These questions come from Sections 7.3, 7.4, 7.5, and 7.6. Try the surrounding problems for more practice.
+\medskip
+\begin{center}\small\setlength{\tabcolsep}{15pt}\renewcommand{\arraystretch}{0.91}\begin{tabular}{ll}\hline
+Guide question & Textbook source\\\hline
+1 & 7.3 \#4\\
+2 & 7.3 \#11\\
+3 & 7.3 \#15\\
+4 & 7.3 \#19\\
+5 & 7.3 \#25\\
+6 & 7.3 \#27\\
+7 & 7.3 \#30\\
+8 & 7.3 \#32\\
+9 & 7.3 \#36\\
+10 & 7.3 \#40\\
+11 & 7.3 \#53\\
+12 & 7.3 \#57\\
+\hline
+13 & 7.4 \#2\\
+14 & 7.4 \#3\\
+15 & 7.4 \#5\\
+16 & 7.4 \#8\\
+17 & 7.4 \#34\\
+18 & 7.4 \#37\\
+19 & 7.4 \#40\\
+20 & 7.4 \#45\\
+21 & 7.4 \#51\\
+\hline
+22 & 7.5 \#1\\
+23 & 7.5 \#6\\
+24 & 7.5 \#12\\
+25 & 7.5 \#18\\
+26 & 7.5 \#22\\
+27 & 7.5 \#31\\
+28 & 7.5 \#35\\
+29 & 7.5 \#37\\
+30 & 7.5 \#41\\
+31 & 7.5 \#43\\
+32 & 7.5 \#44\\
+\hline
+33 & 7.6 \#4\\
+34 & 7.6 \#5\\
+35 & 7.6 \#6\\
+36 & 7.6 \#18\\
+37 & 7.6 \#21\\
+\hline
+Tommy 1 & Original; not in the textbook\\
+Tommy 2 & Original; not in the textbook\\
+Tommy 3 & Original; not in the textbook\\\hline
+\end{tabular}\end{center}
+\end{document}
